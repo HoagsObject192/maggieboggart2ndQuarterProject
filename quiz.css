@@ -1,0 +1,90 @@
+* {
+    font-family: 'sans-serif', 'Helvetica', 'Arial';
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(rgb(48, 100, 63), rgba(52, 239, 145, 0.5))
+}
+
+header, footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #000000;
+}
+
+#main-title {
+    text-transform: uppercase;
+    word-spacing: 10px;
+    letter-spacing: -3px;
+    margin-bottom: none;
+    text-shadow: 2px 2px 5px rgb(60, 2, 67);
+}
+
+.intro {
+    font-size: 1.5em;
+    margin-top: none;
+    text-decoration: underline;
+}
+
+section img:first-child {
+    display: block;
+    width: 25vw;
+    height: 25vh;
+    margin: auto;
+}
+
+.container img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    float: left;
+}
+
+.container ul {
+    list-style-type: none; /* to remove the bullets*/
+    clear: left; /* to remove the effect of float:left */
+}  
+
+a[target="_blank"] {
+    text-decoration: none;
+    color: yellow;
+    border: solid, 3px, rgb(245, 27, 241);
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px rgb(245, 27, 241);
+}
+
+a[href="/internal-page"] {
+    text-decoration: none;
+    color: purple;
+    border: solid, 3px, whitesmoke;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px purple;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+    border: solid, 3px, white;
+    text-shadow: 2px 2px 5px white;
+}
+
+/* extra CSS */
+.container ul {
+    list-style-type: none; /* removes bullets */
+    clear: left; /* removes effect of float:left */
+    padding: 0; /* removes the spaces surrounding the li/s */
+}
+
+.container ul li {
+    width: 150px;
+    padding: 5px;
+    background-color: rgb(245, 27, 241);
+    text-align: center;
+    display: inline-block;
+    border: solid, 3px, rgb(255, 255, 255);
+    border-radius: 0px 25px;
+    color: rgb(255, 255, 255);
+}
