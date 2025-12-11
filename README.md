@@ -1,4 +1,4 @@
-# **Team Name: WDProjStrontiumReolizoTan
+# **Team Name: WDProjStrontiumReolizoTan**
 # **Syntax to Spices**
 ## **Made by STEM students, for STEM students.**
 
@@ -11,9 +11,10 @@
 ## **II. Logo** 
 
 
-![alt text](<proj logo.png>)
 
-Meet our mascot Boggie!!!!
+<img width="366" height="350" alt="proj logo" src="https://github.com/user-attachments/assets/4f910f83-6503-4415-a34a-f649d94cae16" />
+
+Meet our mascot Moggart!!!!
 
 
 
@@ -22,7 +23,7 @@ Meet our mascot Boggie!!!!
 ## **III. Pages**
 
 ### **Summary of Pages**
-* The Homepage contains the navigation bar and information on the site
+* The Homepage contains buttons leading the user to different courses along with Chef Moggart's Dish reccomendation.
 * All Recipe pages contain the navigation bar, the name of the dish, a description and the origin of the dish, a checklist of ingredients for the dish, and a procedural on how to make the dish
 * All Course pages contain the navigation bar and a compilation of recipes under that course
 * The Indecisive Page contains a random recipe generator
@@ -65,13 +66,23 @@ Meet our mascot Boggie!!!!
 ### **Playlists**: This page contains different links to spotify playlists each with a different theme or mood depending on what the site user wants to listen to. It will contain a wide range of music genres to accommodate each person’s music taste. The music is meant to be listened to while following the recipes.
 
 ## ** IV. Integration of JS**
-### Javascript will be integrated in the “indecisive” page of Syntax to Spices through an interactive random recipe generator. This feature is designed to help users who can’t decide what recipe to recreate by generating one from the cite’s selection in just one click. Each recipe generated will contain the name, image, and a short description of the recipe and a link to the recipe page for easy access.
+### Javascript will be integrated in the “indecisive” page of Syntax to Spices through an interactive random recipe generator. This feature is designed to help users who can’t decide what recipe to recreate by generating one from the cite’s selection in just one click. Each recipe generated will contain the name, image, and a short description of the recipe and a link to the recipe page for easy access. It will also be used in the home page to display a randomly chosen recipe as "Chef Moggart's Reccomedation".
 
 ## **V. Wireframe**
 
-### Course Pages 
-![alt text](<Screenshot 2025-11-03 155955.png>)
+### Home Page 
+![Courses page](https://github.com/user-attachments/assets/0453e5c3-4ea0-4cd1-847c-23e3b4437c35)
+
+
+### Courses Page
+![Courses page (2)](https://github.com/user-attachments/assets/bc917056-ec6a-49a0-86dc-e21c61268e19)
+
+
 ### Recipe Pages
-![alt text](<Screenshot 2025-11-03 160731.png>)
+![Recipe](https://github.com/user-attachments/assets/1406540f-c8c3-4835-bc9b-ce42f95d0725)
+
+### Indecisive page
+![Indecisive Page](https://github.com/user-attachments/assets/aa2503d5-0603-47fc-a96a-36b3385033ef)
+
 ### Playlist Page
-![alt text](<Screenshot 2025-11-03 160808.png>)
+![Playlists Page](https://github.com/user-attachments/assets/d4d62776-b565-4081-bb34-4ceb8f905569)
