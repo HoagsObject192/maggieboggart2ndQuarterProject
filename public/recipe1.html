@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syntax to Spices | Homepage</title>
+
+    <!-- <style>
+        body {
+            margin: 0;
+            display: flex;
+            font-family: "Comic Sans MS", Arial, sans-serif;
+            background-color: #fae9df;
+            color: #333;
+            padding-top: 160px; /* space for fixed header */
+        }
+
+        /* HEADER */
+        header {
+            background-color: rgba(248, 201, 212, 0.75);
+            backdrop-filter: blur(4px);
+            padding: 20px 0 30px;
+            text-align: center;
+            border-bottom: 4px solid #e6b3be;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        h1 {
+            font-family: "Amazone BT", cursive;
+            font-size: 80px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .layout {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            width: 220px;
+            padding-left: 40px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: sticky;
+            top: 120px;
+  
+        }
+
+        nav a {
+            text-decoration: none;
+            background-color: #ffffff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            border: 2px solid #333;
+            color: #333;
+            font-weight: bold;
+            width: 200px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: static;
+        }
+
+        nav a:hover {
+            background-color: #ffe3ec;
+        }
+
+        footer {
+            background-color: rgba(248, 201, 212, 0.75);
+            backdrop-filter: blur(4px);
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            border-top: 3px solid #e6b3be;
+            width: 100%;
+            margin-top: 40px;
+            position: static;
+        }
+
+
+    </style> -->
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: "Comic Sans MS", Arial, sans-serif;
+
+        }
+
+        body {
+            margin: 0;
+            background-color: #fae9df;
+            color: #333;
+        }
+
+        .header{
+            font-family: "Amazone BT", cursive;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 4px solid #e6b3be;
+            background-color: rgba(248, 201, 212, 0.75);
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 2px solid black;
+            background: white;
+            }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            text-decoration: none;
+            }
+
+        .nav-links li {
+            cursor: pointer;
+            text-decoration: none;
+            }
+
+        .nav-links a,
+        .nav-links a:visited,
+        .nav-links a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+            }
+
+        .left{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left h2 {
+            margin-bottom: 10px;
+            }
+
+        .image-box {
+            height: 200px;
+            border: 2px solid black;
+            margin-bottom: 20px;
+            }
+
+        .ingredients {
+            border: 2px solid black;
+            padding: 10px;
+            }
+
+        .description,
+        .procedure {
+            border: 2px solid black;
+            padding: 15px;
+            margin-bottom: 20px;
+            }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 2px solid black;
+            background: white;
+            }
+
+        a:hover {
+            background-color: pink;
+            font-size: 17px;
+            border-radius: 25px;
+            text-decoration: none;
+            }
+
+        a:visited {
+             color: rgb(0, 0, 0);
+             text-decoration: none;
+            }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+    </style>
+
+    <link rel="icon" href="media/faviconmog.png">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="media/faviconmog.png" alt="Site icon" class="favicon" width="64" height="64">
+            <span>Syntax to Spices</span>
+        </div>
+        <nav>
+        <ul class="nav-links">
+            <a href="homepage.html">Home</a>
+            <a href="cooking-basics.html">Cooking Basics</a>
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Mains</a>
+            <a href="desserts.html">Desserts</a>
+            <a href="indecisive.html">Indecisive</a>
+            <a href="playlists.html">Playlists</a>
+        </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <h2>Dish Name</h2>
+        </div>
+
+        <div class="image-box">
+            
+        </div>
+
+        <div class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li><input type="checkbox">Ingredient 1</li>
+                <li><input type="checkbox">Ingredient 2</li>
+                <li><input type="checkbox">Ingredient 3</li>
+                <li><input type="checkbox">Ingredient 4</li>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="description">
+            <h3>Description</h3>
+            <p>
+                This is a description of the dish which includes its origin, flavor, profile, texture, etc.
+            </p>
+        </div>
+
+        <div class="procedure">
+            <h3>Procedure</h3>
+            <ol>
+                <li>This is a step in the procedure</li>
+                <li>This is a step in the procedure</li>
+                <li>This is a step in the procedure</li>
+                <li>This is a step in the procedure</li>
+            </ol>
+        </div>
+    </div>
+
+
+   <!-- <div class="layout">
+    <aside class="sidebar">
+        <nav>
+            <a href="cooking-basics.html">Cooking Basics</a>
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Mains</a>
+            <a href="desserts.html">Desserts</a>
+            <a href="indecisive.html">Indecisive</a>
+            <a href="playlists.html">Playlists</a>
+        </nav>
+    </aside>
+    </div> -->
+
+
+    <footer>
+        © Jairo Stian Reolizo | Audrey Margaret Tan
+    </footer>
+</body>
+</html>
