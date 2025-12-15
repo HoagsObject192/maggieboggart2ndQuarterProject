@@ -5,90 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Syntax to Spices | Homepage</title>
 
-    <!-- <style>
-        body {
-            margin: 0;
-            display: flex;
-            font-family: "Comic Sans MS", Arial, sans-serif;
-            background-color: #fae9df;
-            color: #333;
-            padding-top: 160px; /* space for fixed header */
-        }
-
-        /* HEADER */
-        header {
-            background-color: rgba(248, 201, 212, 0.75);
-            backdrop-filter: blur(4px);
-            padding: 20px 0 30px;
-            text-align: center;
-            border-bottom: 4px solid #e6b3be;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        h1 {
-            font-family: "Amazone BT", cursive;
-            font-size: 80px;
-            color: #fff;
-            margin: 0;
-        }
-
-        .layout {
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .sidebar {
-            width: 220px;
-            padding-left: 40px;
-        }
-
-        nav {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            position: sticky;
-            top: 120px;
-  
-        }
-
-        nav a {
-            text-decoration: none;
-            background-color: #ffffff;
-            padding: 15px 25px;
-            border-radius: 8px;
-            border: 2px solid #333;
-            color: #333;
-            font-weight: bold;
-            width: 200px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: static;
-        }
-
-        nav a:hover {
-            background-color: #ffe3ec;
-        }
-
-        footer {
-            background-color: rgba(248, 201, 212, 0.75);
-            backdrop-filter: blur(4px);
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            border-top: 3px solid #e6b3be;
-            width: 100%;
-            margin-top: 40px;
-            position: static;
-        }
-
-
-    </style> -->
-
     <style>
         *{
             box-sizing: border-box;
@@ -153,6 +69,7 @@
         .left{
             display: flex;
             flex-direction: column;
+            margin-left: 100px;
         }
 
         .left h2 {
@@ -160,28 +77,40 @@
             }
 
         .image-box {
-            height: 200px;
-            border: 2px solid black;
-            margin-bottom: 20px;
+            
             }
 
         .ingredients {
             border: 2px solid black;
             padding: 10px;
+            width: 90%;
             }
 
-        .description,
-        .procedure {
-            border: 2px solid black;
-            padding: 15px;
+        .description,{
+            padding: 10px;
             margin-bottom: 20px;
+            width: 90%;
+            border: 2px solid black;
+            gap: 30px;
+            padding: 30px 40px;
+            }
+
+
+        .procedure {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 90%;
+            border: 2px solid black;
+            gap: 30px;
+            padding: 30px 40px;
+            margin-left:100px
             }
 
         footer {
             text-align: center;
             padding: 10px;
-            border-top: 2px solid black;
-            background: white;
+            border-top: 4px solid #e6b3be;
+            background-color: rgba(248, 201, 212, 0.75);
             }
 
         a:hover {
@@ -202,6 +131,13 @@
             align-items: center;
             gap: 10px;
         }
+
+        .box {
+            border: 2px solid #444;
+            padding: 16px 18px;
+            border-radius: 6px;
+        }
+
 
     </style>
 
@@ -231,32 +167,38 @@
 
     <div class="container">
         <div class="left">
-            <h2>Dish Name</h2>
+            <h1>French Fries</h1>
         </div>
+
+        <br>
 
         <div class="image-box">
-            
+            <img src="media/French_Fries.jpg" width="100%" style="border: 5px solid; max-width: 380px; border-radius: 6px; margin-left: 100px;">
         </div>
 
-        <div class="ingredients">
-            <h3>Ingredients</h3>
-            <ul>
-                <li><input type="checkbox">Ingredient 1</li>
-                <li><input type="checkbox">Ingredient 2</li>
-                <li><input type="checkbox">Ingredient 3</li>
-                <li><input type="checkbox">Ingredient 4</li>
-        </div>
-    </div>
-
-    <div class="right">
-        <div class="description">
+            <div class="right">
+        <div class="box description">
             <h3>Description</h3>
             <p>
-                This is a description of the dish which includes its origin, flavor, profile, texture, etc.
+                French fries, a fast food staple and an appetizer kids love. It is a dish of salty and evenly cut strips of potatoes. It 
+                can be made in many ways, as thickness and cooking methods can vary.
             </p>
         </div>
 
-        <div class="procedure">
+        <br>
+
+        <div class="box ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li><input type="checkbox">Potatoes</li>
+                <li><input type="checkbox">Oil</li>
+                <li><input type="checkbox">Salt</li>
+        </div>
+    </div>
+
+
+
+        <div class="box procedure">
             <h3>Procedure</h3>
             <ol>
                 <li>This is a step in the procedure</li>
