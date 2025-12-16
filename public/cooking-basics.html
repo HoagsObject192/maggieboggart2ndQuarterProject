@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syntax to Spices | Homepage</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: "Comic Sans MS", Arial, sans-serif;
+
+        }
+
+        .h1 {
+            text-align: center;
+        }
+
+        body {
+            margin: 0;
+            background-color: #fae9df;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header{
+            font-family: "Amazone BT", cursive;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 4px solid #e6b3be;
+            background-color: rgba(248, 201, 212, 0.75);
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 2px solid black;
+            background: white;
+            }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            text-decoration: none;
+            }
+
+        .nav-links li {
+            cursor: pointer;
+            text-decoration: none;
+            }
+
+        .nav-links a,
+        .nav-links a:visited,
+        .nav-links a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+            }
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            margin-left: 100px;
+        }
+
+        .left h2 {
+            margin-bottom: 10px;
+            }
+
+        .ingredients {
+            border: 2px solid black;
+            padding: 10px;
+            width: 90%;
+            position: relative;
+            margin-left:100px;
+            max-width: 380px;
+            }
+
+        .description {
+            padding: 10px;
+            width: 90%;
+            border: 2px solid black;
+            gap: 30px;
+            padding: 30px 40px;
+            }
+
+
+        .procedure {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 90%;
+            border: 2px solid black;
+            gap: 30px;
+            padding: 30px 40px;
+            }
+
+        .main {
+            flex: 1 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 4px solid #e6b3be;
+            background-color: rgba(248, 201, 212, 0.75);
+            flex-shrink: 0;
+            }
+
+        a:hover {
+            background-color: pink;
+            font-size: 17px;
+            border-radius: 25px;
+            text-decoration: none;
+            }
+
+        a:visited {
+             color: rgb(0, 0, 0);
+             text-decoration: none;
+            }
+
+        .logo {
+            font: "Amazone BT", cursive;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box {
+            border: 5px solid #e6b3be;
+            padding: 16px 18px;
+            border-radius: 6px;
+
+        }
+
+        .recipes {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .recipe {
+            padding: 10px;
+            margin: 0;
+            width: 100%;
+            max-width: 400px;
+            gap: 30px;
+            background-color: #e6b3be;
+            color: aliceblue;
+            box-sizing: border-box;
+            transition: transform 220ms ease, box-shadow 220ms ease;
+            transform-origin: center;
+            will-change: transform;
+            position: relative;
+        }
+
+        .recipe:hover {
+            transform: scale(1.06);
+            z-index: 5;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+        }
+
+        .recipe .recipe-link {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Fixed, centered images inside recipe cards (won't resize) */
+        .recipe img,
+        .recipes img {
+            display: block;
+            margin: 0 auto;
+            width: 350px !important;
+            height: 200px !important;
+            object-fit: cover;
+        }
+
+    </style>
+
+    <link rel="icon" href="media/faviconmog.png">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="media/faviconmog.png" alt="Site icon" class="favicon" width="64" height="64">
+            <span>Syntax to Spices</span>
+        </div>
+        <nav>
+        <ul class="nav-links">
+            <a href="homepage.html">Home</a>
+            <a href="cooking-basics.html">Cooking Basics</a>
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Mains</a>
+            <a href="desserts.html">Desserts</a>
+            <a href="indecisive.html">Indecisive</a>
+            <a href="playlists.html">Playlists</a>
+        </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+            <h1 style="text-align: center;">APPETIZERS</h1>
+        <br>
+
+        <div class="recipes">
+            <div class="box recipe">
+                <a class="recipe-link" href="French Fries.html" aria-label="French Fries recipe">
+                    <img src="media/French_Fries.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">French Fries</h2>
+                    <h4>French fries, a fast food staple and an appetizer kids love. It is a dish of salty and evenly cut strips of potatoes. It 
+                        can be made in many ways, as thickness and cooking methods can vary. French fries also can be dipped in ketchup or other sauces.</h4>
+                </a>
+            </div>
+
+            <div class="box recipe">
+                <a class="recipe-link" href="Mac n Cheese.html" aria-label="Mac N' Cheese recipe">
+                    <img src="media/Mac.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Mac N' Cheese</h2>
+                    <h4>Mac and cheese is a comfort food dish made with macaroni pasta and a cheese sauce. It is a known side dish in American cuisine, often served as an appetizer or main course.
+                        Mac and cheese is creamy and cheesy, and can satisfy cravings.
+                    </h4>
+                </a>
+
+            </div>
+
+            <div class="box recipe">
+                <a class="recipe-link" href="recipe1.html" aria-label="Caesar's Salad recipe">
+                    <img src="media/Caesar.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Caesar's Salad</h2>
+                    <h4>Caesar's salad is a popular dish made with romaine lettuce, croutons, parmesan cheese, and a dressing made from anchovies, garlic, lemon juice, and olive oil. It's fresh and crunchy, making it a great way to start a meal.
+                    </h4>
+                </a>
+
+            </div>            
+        </div>
+
+            
+        
+
+    </main>
+
+
+   <!-- <div class="layout">
+    <aside class="sidebar">
+        <nav>
+            <a href="cooking-basics.html">Cooking Basics</a>
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Mains</a>
+            <a href="desserts.html">Desserts</a>
+            <a href="indecisive.html">Indecisive</a>
+            <a href="playlists.html">Playlists</a>
+        </nav>
+    </aside>
+    </div> -->
+
+
+    <footer>
+        © Jairo Stian Reolizo | Audrey Margaret Tan
+    </footer>
+</body>
+</html>
