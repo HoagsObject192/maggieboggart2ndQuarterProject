@@ -22,17 +22,22 @@
             padding: 20px 0 30px;
             text-align: center;
             border-bottom: 4px solid #e6b3be;
-            position: fixed;
+            position: static;
             top: 0;
             width: 100%;
             z-index: 1000;
         }
 
         h1 {
-            font-family: "Amazone BT", cursive;
+            font-family: "Brush Script MT", cursive;
             font-size: 80px;
             color: #fff;
             margin: 0;
+            text-shadow:
+                -2px -2px 0 #8b5e3c,
+                 2px -2px 0 #8b5e3c,
+                -2px  2px 0 #8b5e3c,
+                 2px  2px 0 #8b5e3c;
         }
 
         .layout {
@@ -67,7 +72,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: static;
+           
         }
 
         nav a:hover {
@@ -85,21 +90,13 @@
             margin-top: 40px;
             position: static;
         }
-
-
     </style>
 </head>
 
 <body>
     <header>
         <h1>Syntax to Spices</h1>
-    </header>
-
-
-
-   <!-- <div class="layout">
-    <aside class="sidebar">
-        <nav>
+            <a href="homepage.html">Home</a>
             <a href="cooking-basics.html">Cooking Basics</a>
             <a href="appetizers.html">Appetizers</a>
             <a href="mains.html">Mains</a>
@@ -107,12 +104,11 @@
             <a href="indecisive.html">Indecisive</a>
             <a href="playlists.html">Playlists</a>
         </nav>
-    </aside>
-    </div> -->
-
+    </header>
 
     <footer>
         © Jairo Stian Reolizo | Audrey Margaret Tan
     </footer>
 </body>
+
 </html>
