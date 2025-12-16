@@ -1,114 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syntax to Spices | Homepage</title>
+    <meta charset="UTF-8">
+    <title>Cookbook Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        /* RESET */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            margin: 0;
-            display: flex;
-            font-family: "Comic Sans MS", Arial, sans-serif;
-            background-color: #fae9df;
-            color: #333;
-            padding-top: 160px; /* space for fixed header */
+            font-family: "Georgia", serif;
+            background: #fae9df;
         }
 
-        /* HEADER */
+        /* FIXED HEADER */
         header {
-            background-color: rgba(248, 201, 212, 0.75);
-            backdrop-filter: blur(4px);
-            padding: 20px 0 30px;
-            text-align: center;
-            border-bottom: 4px solid #e6b3be;
-            position: static;
+            position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            z-index: 1000;
-        }
-
-        h1 {
-            font-family: "Brush Script MT", cursive;
-            font-size: 80px;
-            color: #fff;
-            margin: 0;
-            text-shadow:
-                -2px -2px 0 #8b5e3c,
-                 2px -2px 0 #8b5e3c,
-                -2px  2px 0 #8b5e3c,
-                 2px  2px 0 #8b5e3c;
-        }
-
-        .layout {
+            height: 70px;
+            background-color: #ff9db5;
+            color: white;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            padding-left: 30px;
+            font-size: 1.6rem;
+    
+            text-shadow:
+                -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
         }
 
-        .sidebar {
-            width: 220px;
-            padding-left: 40px;
+        /* PAGE CONTENT */
+        .container {
+            display: flex;
+            margin-top: 90px;
+            min-height: 100vh;
         }
 
-        nav {
+        /* LEFT PANEL */
+        .left-panel {
+            width: 50%;
+            padding: 40px;
+        }
+
+        /* BUTTON LIST */
+        .cookbook-buttons {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            position: sticky;
-            top: 120px;
-  
+            gap: 20px;
         }
 
-        nav a {
+        .cookbook-buttons a {
             text-decoration: none;
-            background-color: #ffffff;
-            padding: 15px 25px;
-            border-radius: 8px;
-            border: 2px solid #333;
-            color: #333;
-            font-weight: bold;
-            width: 200px;
-            height: 60px;
+            background: rgba(248, 201, 212, 0.75);
+            border: 3px solid black;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: white;
+            border-radius: 14px;
+            box-shadow: 4px 4px 0px black;
+            transition: all 0.2s ease;
+            text-shadow:
+                -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
+        }
+
+        .cookbook-buttons a:hover {
+            transform: translateY(-4px);
+            box-shadow: 6px 6px 0px black;
+            background: rgba(248, 201, 212, 0.75);
+        }
+
+        /* RIGHT PANEL */
+        .right-panel {
+            width: 50%;
+            padding: 40px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #ff9db5;
+            padding: 20px 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-           
+            gap: 15px;
         }
 
-        nav a:hover {
-            background-color: #ffe3ec;
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid black;
         }
 
-        footer {
-            background-color: rgba(248, 201, 212, 0.75);
-            backdrop-filter: blur(4px);
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            border-top: 3px solid #e6b3be;
+        .social-icon img {
             width: 100%;
-            margin-top: 40px;
-            position: static;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <header>
-        <h1>Syntax to Spices</h1>
-            <a href="homepage.html">Home</a>
-            <a href="cooking-basics.html">Cooking Basics</a>
-            <a href="appetizers.html">Appetizers</a>
-            <a href="mains.html">Mains</a>
-            <a href="desserts.html">Desserts</a>
-            <a href="indecisive.html">Indecisive</a>
-            <a href="playlists.html">Playlists</a>
-        </nav>
+        Syntax to Spices
     </header>
 
-    <footer>
-        © Jairo Stian Reolizo | Audrey Margaret Tan
-    </footer>
-</body>
+    <!-- MAIN CONTENT -->
+    <div class="container">
 
-</html>
+        <!-- LEFT SIDE BUTTONS -->
+        <div class="left-panel">
+            <div class="cookbook-buttons">
+                <a href="cooking-basics.html">Cooking Basics</a>
+                <a href="appetizers.html">Appetizers</a>
+                <a href="mains.html">Mains</a>
+                <a href="desserts.html">Desserts</a>
+                <a href="indecisive.html">Indecisive</a>
+                <a href="playlists.html">Playlists</a>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE CONTENT -->
+        <div class="right-panel">
+            <p>
+                Add your recipes, images, or descriptions here.
+                Scroll the page to see the fixed header stay in place.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#" class="social-icon">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+        <a href="#" class="social-icon">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="#" class="social-icon">
