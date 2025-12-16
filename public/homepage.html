@@ -8,61 +8,32 @@
     <style>
         *{
             box-sizing: border-box;
-            font-family: "Comic Sans MS", Arial, sans-serif;
-
-        }
-
-        .h1 {
-            text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            background-color: #fae9df;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            font-family: "Georgia", serif;
+            background: #fae9df;
         }
-
-        .header{
-            font-family: "Amazone BT", cursive;
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #ff9db5;
+            color: white;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 12px 20px;
-            border-bottom: 4px solid #e6b3be;
-            background-color: rgba(248, 201, 212, 0.75);
-            color: #333;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            border-bottom: 2px solid black;
-            background: white;
-            }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            padding: 0;
-            text-decoration: none;
-            }
-
-        .nav-links li {
-            cursor: pointer;
-            text-decoration: none;
-            }
-
-        .nav-links a,
-        .nav-links a:visited,
-        .nav-links a:active {
-            color: black;
-            text-decoration: none;
+            padding-left: 30px;
+            font-size: 1.6rem;
+    
+            text-shadow:
+                -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
         }
 
 
@@ -159,18 +130,20 @@
             font-size: 17px;
             border-radius: 25px;
             text-decoration: none;
-            }
-
-        a:visited {
-             color: rgb(0, 0, 0);
-             text-decoration: none;
-            }
-
-        .logo {
-            font: "Amazone BT", cursive;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            background: rgba(248, 201, 212, 0.75);
+            border: 3px solid black;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: white;
+            border-radius: 14px;
+            box-shadow: 4px 4px 0px black;
+            transition: all 0.2s ease;
+            text-shadow:
+                -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
         }
 
         .box {
@@ -420,71 +393,36 @@
 
 <body>
 
-    <header class="header">
-        <div class="logo">
-            <img src="media/faviconmog.png" alt="Site icon" class="favicon" width="64" height="64">
-            <span>Syntax to Spices</span>
-        </div>
-        <nav>
-        <ul class="nav-links">
-            <a href="homepage.html">Home</a>
-            <a href="cooking-basics.html">Cooking Basics</a>
-            <a href="appetizers.html">Appetizers</a>
-            <a href="mains.html">Mains</a>
-            <a href="desserts.html">Desserts</a>
-            <a href="indecisive.html">Indecisive</a>
-            <a href="playlists.html">Playlists</a>
-        </ul>
-        </nav>
+    <title>
+        <link rel="icon" type="image/png" href="faviconmog.png">
+    </title>
+
+    <!-- HEADER -->
+    <header>
+        Syntax to Spices
     </header>
 
-    <h1 style="text-align: center;">Syntax To Spices</h1>
+    <!-- MAIN CONTENT -->
+    <div class="container">
 
-    <main class="main">
-        <div class="side-bar" aria-hidden="false">
-            <details class="side-group" aria-label="Cooking Basics">
-                <summary class="side-btn">Cooking Basics</summary>
-                <div class="side-links">
-                    <a href="cooking-basics.html">Cooking Basics</a>
-                </div>
-            </details>
-
-            <details class="side-group" aria-label="Courses">
-                <summary class="side-btn">Courses</summary>
-                <div class="side-links">
-                    <a href="appetizers.html">Appetizers</a>
-                    <a href="mains.html">Mains</a>
-                    <a href="desserts.html">Desserts</a>
-                </div>
-            </details>
-
-            <details class="side-group" aria-label="Indecisive and Playlists">
-                <summary class="side-btn">Indecisive / Playlists</summary>
-                <div class="side-links">
-                    <a href="indecisive.html">Indecisive</a>
-                    <a href="playlists.html">Playlists</a>
-                </div>
-            </details>
-        </div>
-        <div class="content-area">
-            <h1 style="text-align: center;">Recommended</h1>
-        <br>
-
-
-        <div id="featured-box" class="featured fade-in" aria-live="polite">
-            <img id="featured-img" src="media/French_Fries.jpg" alt="Featured dish image">
-            <div class="meta">
-                <h3 id="featured-title">French Fries</h3>
-                <p id="featured-desc">A crunchy, golden appetizer perfect for sharing — served with ketchup or your favorite dipping sauce.</p>
-                <a id="featured-link" class="view-link" href="French Fries.html">View recipe</a>
-                <div style="margin-top:8px;color:#666;font-size:12px;">(This dish updates automatically every minute)</div>
+        <!-- LEFT SIDE BUTTONS -->
+        <div class="left-panel">
+            <div class="cookbook-buttons">
+                <a href="cooking-basics.html">Cooking Basics</a>
+                <a href="appetizers.html">Appetizers</a>
+                <a href="mains.html">Mains</a>
+                <a href="desserts.html">Desserts</a>
+                <a href="indecisive.html">Indecisive</a>
+                <a href="playlists.html">Playlists</a>
             </div>
         </div>
 
-        <div class="proj-box">
-            <a href="aboutus.html" title="Click to know more about us" aria-label="About us">
-                <img src="media/faviconmog.png" alt="Project logo" class="proj-logo">
-            </a>
+        <!-- RIGHT SIDE CONTENT -->
+        <div class="right-panel">
+            <p>
+                Add your recipes, images, or descriptions here.
+                Scroll the page to see the fixed header stay in place.
+            </p>
         </div>
 
 
