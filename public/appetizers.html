@@ -20,6 +20,9 @@
             margin: 0;
             background-color: #fae9df;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .header{
@@ -107,11 +110,16 @@
             padding: 30px 40px;
             }
 
+        .main {
+            flex: 1 0 auto;
+        }
+
         footer {
             text-align: center;
             padding: 10px;
             border-top: 4px solid #e6b3be;
             background-color: rgba(248, 201, 212, 0.75);
+            flex-shrink: 0;
             }
 
         a:hover {
@@ -140,18 +148,45 @@
 
         }
 
+        .recipes {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
         .recipe {
             padding: 10px;
-            margin-bottom: 20px;
-            width: 90%;
-            gap: 30px;
-            padding: 10px 10px;
+            margin: 0;
+            width: 100%;
             max-width: 400px;
-            margin-left: 100px;
+            gap: 30px;
             background-color: #e6b3be;
-            color:aliceblue;
-            
-            }
+            color: aliceblue;
+            box-sizing: border-box;
+            transition: transform 220ms ease, box-shadow 220ms ease;
+            transform-origin: center;
+            will-change: transform;
+            position: relative;
+        }
+
+        .recipe:hover {
+            transform: scale(1.06);
+            z-index: 5;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+        }
+
+        .recipe .recipe-link {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
 
 
     </style>
@@ -180,30 +215,46 @@
         </nav>
     </header>
 
+    <main class="main">
             <h1 style="text-align: center;">APPETIZERS</h1>
         <br>
 
-        <div class="box recipe">
-            <img src="media/French_Fries.jpg" width="100%" style="border: 5px solid; max-width: 380px; border-radius: 6px;">
-            <h2 style="text-align: center;">French Fries</h2>
-            <h4>French fries, a fast food staple and an appetizer kids love. It is a dish of salty and evenly cut strips of potatoes. It 
-                can be made in many ways, as thickness and cooking methods can vary.</h4>
+        <div class="recipes">
+            <div class="box recipe">
+                <a class="recipe-link" href="#" aria-label="French Fries recipe">
+                    <img src="media/French_Fries.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">French Fries</h2>
+                    <h4>French fries, a fast food staple and an appetizer kids love. It is a dish of salty and evenly cut strips of potatoes. It 
+                        can be made in many ways, as thickness and cooking methods can vary. French fries also can be dipped in ketchup or other sauces.</h4>
+                </a>
+            </div>
 
-        </div>    
+            <div class="box recipe">
+                <a class="recipe-link" href="#" aria-label="Mac N' Cheese recipe">
+                    <img src="media/Mac.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Mac N' Cheese</h2>
+                    <h4>Mac and cheese is a comfort food dish made with macaroni pasta and a cheese sauce. It is a known side dish in American cuisine, often served as an appetizer or main course.
+                        Mac and cheese is creamy and cheesy, and can satisfy cravings.
+                    </h4>
+                </a>
 
-        <div class="box recipe">
-            <img src="media/French_Fries.jpg" width="100%" style="border: 5px solid; max-width: 380px; border-radius: 6px;">
-            <h2 style="text-align: center;">Mac N' Cheese</h2>
-            <h4>Mac and cheese is a comfort food dish made with macaroni pasta and a cheese sauce. It is a popular side dish in American cuisine, often served as an appetizer or main course.</h4>
+            </div>
 
-        </div>    
+            <div class="box recipe">
+                <a class="recipe-link" href="#" aria-label="Caesar's Salad recipe">
+                    <img src="media/Caesar.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Caesar's Salad</h2>
+                    <h4>Caesar's salad is a popular dish made with romaine lettuce, croutons, parmesan cheese, and a dressing made from anchovies, garlic, lemon juice, and olive oil. It's fresh and crunchy, making it a great way to start a meal.
+                    </h4>
+                </a>
+
+            </div>            
+        </div>
 
             
         
-    </div>
 
-
-    </div>
+    </main>
 
 
    <!-- <div class="layout">
