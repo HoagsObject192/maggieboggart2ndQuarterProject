@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syntax to Spices | Homepage</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: "Comic Sans MS", Arial, sans-serif;
+
+        }
+
+        body {
+            margin: 0;
+            background-color: #fae9df;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .header{
+            font-family: "Amazone BT", cursive;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 4px solid #e6b3be;
+            background-color: rgba(248, 201, 212, 0.75);
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 2px solid black;
+            background: white;
+            }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            text-decoration: none;
+            }
+
+        .nav-links li {
+            cursor: pointer;
+            text-decoration: none;
+            }
+
+        .nav-links a,
+        .nav-links a:visited,
+        .nav-links a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        .container {
+            display: grid;
+            /* left column (image + ingredients) enlarged to push the right column */
+            grid-template-columns: 480px 1fr;
+            gap: 16px;
+            padding: 20px;
+            align-items: start;
+            }
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            text-align: center;
+        }
+
+        .left h2 {
+            margin-bottom: 10px;
+            }
+
+        /* Center image and ingredients and keep them stacked */
+        .image-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            max-width: 480px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .ingredients {
+            border: 2px solid black;
+            padding: 10px;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #e6b3be;
+        }
+
+        /* Remove default list bullets but keep checkboxes visible */
+        .ingredients ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .ingredients li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 0;
+        }
+
+        .ingredients input[type="checkbox"] {
+            margin: 0;
+            transform: scale(1);
+        }
+
+        .description {
+            padding: 18px 16px;
+            width: 100%;
+            border: 2px solid black;
+            gap: 12px;
+            background-color: #e6b3be;
+            box-sizing: border-box;
+            font-size: 15px;
+            line-height: 1.4;
+            }
+
+
+        .procedure {
+            padding: 18px 16px;
+            margin-bottom: 16px;
+            width: 100%;
+            border: 2px solid black;
+            gap: 12px;
+            background-color: #e6b3be;
+            box-sizing: border-box;
+            font-size: 15px;
+            line-height: 1.4;
+            }
+
+        /* Make layout responsive on small screens */
+        @media (max-width: 720px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .image-box img, .recipes img {
+                height: 200px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 4px solid #e6b3be;
+            background-color: rgba(248, 201, 212, 0.75);
+            }
+
+        a:hover {
+            background-color: pink;
+            font-size: 17px;
+            border-radius: 25px;
+            text-decoration: none;
+            }
+
+        a:visited {
+             color: rgb(0, 0, 0);
+             text-decoration: none;
+            }
+
+        .logo {
+            font: "Amazone BT", cursive;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box {
+            border: 2px solid #444;
+            padding: 16px 18px;
+            border-radius: 6px;
+        }
+
+        /* Make recipe images match enlarged ingredient width */
+        .image-box img,
+        .recipes img {
+            width: 100%;
+            max-width: 480px;
+            height: 260px;
+            object-fit: cover;
+            border: 6px solid;
+            border-radius: 6px;
+            display: block;
+            margin: 0 auto;
+            transition: box-shadow 180ms ease;
+        }
+
+        /* Typography and spacing improvements */
+        h1, h2, h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            line-height: 1.25;
+        }
+
+        p, h4 {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .ingredients li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+        }
+
+        .procedure ol li {
+            margin-bottom: 0.5rem;
+        }
+
+
+    </style>
+
+    <link rel="icon" href="media/faviconmog.png">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="media/faviconmog.png" alt="Site icon" class="favicon" width="64" height="64">
+            <span>Syntax to Spices</span>
+        </div>
+        <nav>
+        <ul class="nav-links">
+            <a href="homepage.html">Home</a>
+            <a href="cooking-basics.html">Cooking Basics</a>
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Mains</a>
+            <a href="desserts.html">Desserts</a>
+            <a href="indecisive.html">Indecisive</a>
+            <a href="playlists.html">Playlists</a>
+        </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <h1>Caesar Salad</h1>
+        </div>
+
+        <br>
+
+        <div class="image-box">
+            <img src="media/caesar.jpg" alt="Caesar Salad">
+
+            <div class="box ingredients">
+                <h3>Ingredients</h3>
+               <ul>
+    <li><input type="checkbox"> 3 anchovy fillets</li>
+    <li><input type="checkbox"> 2 cloves garlic, finely chopped</li>
+    <li><input type="checkbox"> ½ lemon, juiced</li>
+    <li><input type="checkbox"> 2 tablespoons red wine vinegar</li>
+    <li><input type="checkbox"> 1 large egg yolk</li>
+    <li><input type="checkbox"> 1 tablespoon Dijon mustard</li>
+    <li><input type="checkbox"> 1 dash Worcestershire sauce</li>
+    <li><input type="checkbox"> ¼ cup olive oil</li>
+    <li><input type="checkbox"> Salt and ground black pepper to taste</li>
+</ul>
+            </div>
+        </div>
+
+            <div class="right">
+        <div class="box description">
+            <h3>Description</h3>
+            <p>
+               Crisp romaine lettuce is tossed in a creamy, garlicky dressing with Parmesan and crunchy croutons. Each bite is fresh and savory, with a satisfying crunch. A classic salad that feels both light and indulgent.
+            </p>
+        </div>
+
+        <br>
+
+        
+        <div class="box procedure">
+            <h3>Procedure</h3>
+            <ol>
+                <ul>
+    <li>Gather all ingredients needed to make the classic Caesar salad.</li>
+    <li>In a large salad bowl, mash the anchovy fillets together with the garlic until smooth.</li>
+    <li>Add lemon juice, red wine vinegar, Dijon mustard, egg yolk, and Worcestershire sauce to the bowl.</li>
+    <li>Whisk the mixture until smooth and creamy.</li>
+    <li>Slowly drizzle in the olive oil while whisking continuously to emulsify the dressing.</li>
+    <li>Season the dressing with salt and black pepper to taste.</li>
+    <li>Gently toss the romaine lettuce and Parmesan cheese into the dressing until evenly coated.</li>
+    <li>Top the salad with croutons.</li>
+    <li>Serve immediately and enjoy.</li>
+</ul>
+
+            </ol>
+        </div>
+
+        
+    </div>
+
+
+    </div>
+
+
+   <!-- <div class="layout">
+    <aside class="sidebar">
+        <nav>
+            <a href="cooking-basics.html">Cooking Basics</a>
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Mains</a>
+            <a href="desserts.html">Desserts</a>
+            <a href="indecisive.html">Indecisive</a>
+            <a href="playlists.html">Playlists</a>
+        </nav>
+    </aside>
+    </div> -->
+
+
+    <footer>
+        © Jairo Stian Reolizo | Audrey Margaret Tan
+    </footer>
+</body>
+</html>

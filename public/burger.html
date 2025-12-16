@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syntax to Spices | Homepage</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: "Comic Sans MS", Arial, sans-serif;
+
+        }
+
+        body {
+            margin: 0;
+            background-color: #fae9df;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .header{
+            font-family: "Amazone BT", cursive;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 4px solid #e6b3be;
+            background-color: rgba(248, 201, 212, 0.75);
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 2px solid black;
+            background: white;
+            }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            text-decoration: none;
+            }
+
+        .nav-links li {
+            cursor: pointer;
+            text-decoration: none;
+            }
+
+        .nav-links a,
+        .nav-links a:visited,
+        .nav-links a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        .container {
+            display: grid;
+            /* left column (image + ingredients) enlarged to push the right column */
+            grid-template-columns: 480px 1fr;
+            gap: 16px;
+            padding: 20px;
+            align-items: start;
+            }
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            text-align: center;
+        }
+
+        .left h2 {
+            margin-bottom: 10px;
+            }
+
+        /* Center image and ingredients and keep them stacked */
+        .image-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            max-width: 480px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .ingredients {
+            border: 2px solid black;
+            padding: 10px;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #e6b3be;
+        }
+
+        /* Remove default list bullets but keep checkboxes visible */
+        .ingredients ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .ingredients li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 0;
+        }
+
+        .ingredients input[type="checkbox"] {
+            margin: 0;
+            transform: scale(1);
+        }
+
+        .description {
+            padding: 18px 16px;
+            width: 100%;
+            border: 2px solid black;
+            gap: 12px;
+            background-color: #e6b3be;
+            box-sizing: border-box;
+            font-size: 15px;
+            line-height: 1.4;
+            }
+
+
+        .procedure {
+            padding: 18px 16px;
+            margin-bottom: 16px;
+            width: 100%;
+            border: 2px solid black;
+            gap: 12px;
+            background-color: #e6b3be;
+            box-sizing: border-box;
+            font-size: 15px;
+            line-height: 1.4;
+            }
+
+        /* Make layout responsive on small screens */
+        @media (max-width: 720px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .image-box img, .recipes img {
+                height: 200px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 4px solid #e6b3be;
+            background-color: rgba(248, 201, 212, 0.75);
+            }
+
+        a:hover {
+            background-color: pink;
+            font-size: 17px;
+            border-radius: 25px;
+            text-decoration: none;
+            }
+
+        a:visited {
+             color: rgb(0, 0, 0);
+             text-decoration: none;
+            }
+
+        .logo {
+            font: "Amazone BT", cursive;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box {
+            border: 2px solid #444;
+            padding: 16px 18px;
+            border-radius: 6px;
+        }
+
+        /* Make recipe images match enlarged ingredient width */
+        .image-box img,
+        .recipes img {
+            width: 100%;
+            max-width: 480px;
+            height: 260px;
+            object-fit: cover;
+            border: 6px solid;
+            border-radius: 6px;
+            display: block;
+            margin: 0 auto;
+            transition: box-shadow 180ms ease;
+        }
+
+        /* Typography and spacing improvements */
+        h1, h2, h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            line-height: 1.25;
+        }
+
+        p, h4 {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .ingredients li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+        }
+
+        .procedure ol li {
+            margin-bottom: 0.5rem;
+        }
+
+
+    </style>
+
+    <link rel="icon" href="media/faviconmog.png">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="media/faviconmog.png" alt="Site icon" class="favicon" width="64" height="64">
+            <span>Syntax to Spices</span>
+        </div>
+        <nav>
+        <ul class="nav-links">
+            <a href="homepage.html">Home</a>
+            <a href="cooking-basics.html">Cooking Basics</a>
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Mains</a>
+            <a href="desserts.html">Desserts</a>
+            <a href="indecisive.html">Indecisive</a>
+            <a href="playlists.html">Playlists</a>
+        </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <h1>Classic Burger</h1>
+        </div>
+
+        <br>
+
+        <div class="image-box">
+            <img src="media/burger.png" alt="Burger">
+
+            <div class="box ingredients">
+                <h3>Ingredients</h3>
+            <ul>
+    <li><input type="checkbox"> 1 large egg</li>
+  <li><input type="checkbox"> ½ teaspoon salt</li>
+  <li><input type="checkbox"> ½ teaspoon ground black pepper</li>
+  <li><input type="checkbox"> 1 pound ground beef</li>
+  <li><input type="checkbox"> ½ cup fine dry bread crumbs</li>
+  <li><input type="checkbox"> Tomatoes, thinly sliced</li>
+  <li><input type="checkbox"> Onions, thinly sliced</li>
+  <li><input type="checkbox"> Cheese slices</li>
+  <li><input type="checkbox"> Burger buns</li>
+</ul>
+            </div>
+        </div>
+
+            <div class="right">
+        <div class="box description">
+            <h3>Description</h3>
+            <p>
+               A juicy beef patty is paired with melted cheese, fresh lettuce, and ripe tomatoes inside a soft bun. Each bite balances tender meat, crisp veggies, and pillowy bread. The ultimate comfort food classic.
+            </p>
+        </div>
+
+        <br>
+
+        
+        <div class="box procedure">
+            <h3>Procedure</h3>
+            <ol>
+    <ul>
+
+  <li>Preheat an outdoor grill for high heat and lightly oil grate.</li>
+  <li>Whisk egg, salt, and pepper together in a medium bowl.</li>
+  <li>Add ground beef and bread crumbs; mix until well blended.</li>
+  <li>Form into four ¾‑inch‑thick patties.</li>
+  <li>Place patties on the preheated grill and cook 6–8 minutes per side, until cooked to desired doneness (160 °F internal temperature).</li>
+  <li>Layer on top of buns with tomatoes, cheese, lettuce, onions, and pickles (optional)</li>
+  <li>Serve hot and enjoy!</li>
+
+    </ul>
+
+            </ol>
+        </div>
+
+        
+    </div>
+
+
+    </div>
+
+
+   <!-- <div class="layout">
+    <aside class="sidebar">
+        <nav>
+            <a href="cooking-basics.html">Cooking Basics</a>
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Mains</a>
+            <a href="desserts.html">Desserts</a>
+            <a href="indecisive.html">Indecisive</a>
+            <a href="playlists.html">Playlists</a>
+        </nav>
+    </aside>
+    </div> -->
+
+
+    <footer>
+        © Jairo Stian Reolizo | Audrey Margaret Tan
+    </footer>
+</body>
+</html>

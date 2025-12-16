@@ -8,32 +8,61 @@
     <style>
         *{
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            font-family: "Comic Sans MS", Arial, sans-serif;
+
+        }
+
+        .h1 {
+            text-align: center;
         }
 
         body {
-            font-family: "Georgia", serif;
-            background: #fae9df;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 70px;
-            background-color: #ff9db5;
-            color: white;
+            margin: 0;
+            background-color: #fae9df;
+            color: #333;
             display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header{
+            font-family: "Amazone BT", cursive;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding-left: 30px;
-            font-size: 1.6rem;
-    
-            text-shadow:
-                -1px -1px 0 #000,
-                 1px -1px 0 #000,
-                -1px  1px 0 #000,
-                 1px  1px 0 #000;
+            padding: 12px 20px;
+            border-bottom: 4px solid #e6b3be;
+            background-color: rgba(248, 201, 212, 0.75);
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 2px solid black;
+            background: white;
+            }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            text-decoration: none;
+            }
+
+        .nav-links li {
+            cursor: pointer;
+            text-decoration: none;
+            }
+
+        .nav-links a,
+        .nav-links a:visited,
+        .nav-links a:active {
+            color: black;
+            text-decoration: none;
         }
 
 
@@ -134,20 +163,18 @@
             font-size: 17px;
             border-radius: 25px;
             text-decoration: none;
-            background: rgba(248, 201, 212, 0.75);
-            border: 3px solid black;
-            padding: 30px;
-            text-align: center;
-            font-size: 1.2rem;
-            color: white;
-            border-radius: 14px;
-            box-shadow: 4px 4px 0px black;
-            transition: all 0.2s ease;
-            text-shadow:
-                -1px -1px 0 #000,
-                 1px -1px 0 #000,
-                -1px  1px 0 #000,
-                 1px  1px 0 #000;
+            }
+
+        a:visited {
+             color: rgb(0, 0, 0);
+             text-decoration: none;
+            }
+
+        .logo {
+            font: "Amazone BT", cursive;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .box {
@@ -207,7 +234,7 @@
         }
 
         .side-bar {
-            position: static;           /* now part of the document flow */
+            position: static;           
             display: flex;
             flex-direction: column;
             gap: 14px;
@@ -274,7 +301,7 @@
             border-radius:8px;
             color: black;
             text-decoration:none;
-            font-size:18px; /* larger link text */
+            font-size:18px; 
             transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease, font-size 180ms ease;
         }
 
@@ -397,36 +424,69 @@
 
 <body>
 
-    <title>
-        <link rel="icon" type="image/png" href="faviconmog.png">
-    </title>
-
-    <!-- HEADER -->
-    <header>
-        Syntax to Spices
+    <header class="header">
+        <div class="logo">
+            <img src="media/faviconmog.png" alt="Site icon" class="favicon" width="64" height="64">
+            <span>Syntax to Spices</span>
+        </div>
+        <nav>
+        <ul class="nav-links">
+            <a href="homepage.html">Home</a>
+            <a href="cooking-basics.html">Cooking Basics</a>
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Mains</a>
+            <a href="desserts.html">Desserts</a>
+            <a href="indecisive.html">Indecisive</a>
+            <a href="playlists.html">Playlists</a>
+        </ul>
+        </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <div class="container">
+    <main class="main">
+        <div class="side-bar" aria-hidden="false">
+            <details class="side-group" aria-label="Cooking Basics">
+                <summary class="side-btn">Cooking Basics</summary>
+                <div class="side-links">
+                    <a href="cooking-basics.html">Cooking Basics</a>
+                </div>
+            </details>
 
-        <!-- LEFT SIDE BUTTONS -->
-        <div class="left-panel">
-            <div class="cookbook-buttons">
-                <a href="cooking-basics.html">Cooking Basics</a>
-                <a href="appetizers.html">Appetizers</a>
-                <a href="mains.html">Mains</a>
-                <a href="desserts.html">Desserts</a>
-                <a href="indecisive.html">Indecisive</a>
-                <a href="playlists.html">Playlists</a>
+            <details class="side-group" aria-label="Courses">
+                <summary class="side-btn">Courses</summary>
+                <div class="side-links">
+                    <a href="appetizers.html">Appetizers</a>
+                    <a href="mains.html">Mains</a>
+                    <a href="desserts.html">Desserts</a>
+                </div>
+            </details>
+
+            <details class="side-group" aria-label="Indecisive and Playlists">
+                <summary class="side-btn">Indecisive / Playlists</summary>
+                <div class="side-links">
+                    <a href="indecisive.html">Indecisive</a>
+                    <a href="playlists.html">Playlists</a>
+                </div>
+            </details>
+        </div>
+        <div class="content-area">
+            <h1 style="text-align: center;">Chef Moggart's Reccomendation</h1>
+        <br>
+
+
+        <div id="featured-box" class="featured fade-in" aria-live="polite">
+            <img id="featured-img" src="media/French_Fries.jpg" alt="Featured dish image">
+            <div class="meta">
+                <h3 id="featured-title">French Fries</h3>
+                <p id="featured-desc">A crunchy, golden appetizer perfect for sharing — served with ketchup or your favorite dipping sauce.</p>
+                <a id="featured-link" class="view-link" href="French Fries.html">View recipe</a>
+                <div style="margin-top:8px;color:#666;font-size:12px;">(This dish updates automatically every minute)</div>
             </div>
         </div>
 
-        <!-- RIGHT SIDE CONTENT -->
-        <div class="right-panel">
-            <p>
-                Add your recipes, images, or descriptions here.
-                Scroll the page to see the fixed header stay in place.
-            </p>
+        <div class="proj-box">
+            <a href="aboutus.html" title="Click to know more about us" aria-label="About us">
+                <img src="media/faviconmog.png" alt="Project logo" class="proj-logo">
+            </a>
         </div>
 
 
@@ -439,10 +499,10 @@
     </main>
 
     <script>
-        // Ensure only one details group is open at a time
+        
         document.querySelectorAll('.side-group summary').forEach(summary => {
             summary.addEventListener('click', function (e) {
-                // Slight timeout to let browser toggle the open state
+                
                 const parent = this.parentElement;
                 setTimeout(() => {
                     if (parent.open) {
@@ -453,7 +513,7 @@
                 }, 0);
             });
 
-            // Open when summary receives keyboard focus (accessibility)
+          
             summary.addEventListener('focus', function () {
                 const parent = this.parentElement;
                 parent.setAttribute('open', '');
@@ -461,7 +521,7 @@
             });
         });
 
-        // Open groups on hover and close on mouseleave (keeps keyboard focus persistent)
+        
         document.querySelectorAll('.side-group').forEach(group => {
             group.addEventListener('mouseenter', function() {
                 group.setAttribute('open', '');
@@ -475,7 +535,7 @@
             });
         });
 
-        // Featured rotating dishes (synchronized to clock minutes)
+      
         (function(){
             const dishes = [
                 {
@@ -498,9 +558,8 @@
                 }
             ];
 
-            // Optional offset: set to align a specific minute with a specific dish.
-            // Example: to make minute 20 show Mac N' Cheese (index 1) set offset = ((1 - 20) % 3 + 3) % 3 = 2
-            const offset = 0; // change this number to shift mapping between minute and dish
+            
+            const offset = 0; 
 
             const imgEl = document.getElementById('featured-img');
             const titleEl = document.getElementById('featured-title');
@@ -510,7 +569,7 @@
 
             function showDish(i){
                 const d = dishes[((i % dishes.length) + dishes.length) % dishes.length];
-                // fade out
+                
                 boxEl.classList.remove('fade-in');
                 boxEl.classList.add('fade-out');
                 setTimeout(()=>{
@@ -519,7 +578,7 @@
                     titleEl.textContent = d.title;
                     descEl.textContent = d.desc;
                     linkEl.href = d.href;
-                    // fade in
+                    // in
                     boxEl.classList.remove('fade-out');
                     boxEl.classList.add('fade-in');
                 }, 420);
@@ -532,10 +591,10 @@
                 showDish(idx);
             }
 
-            // initial: show the dish for the current minute immediately
+            // show dish for minute
             updateToCurrentMinute();
 
-            // Schedule the first update exactly at the next minute boundary, then every 60s
+            // first update then every 1 min
             function scheduleNext(){
                 const now = new Date();
                 const msUntilNext = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
