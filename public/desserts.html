@@ -188,6 +188,15 @@
             height: 100%;
         }
 
+        /* Fixed, centered images inside recipe cards (won't resize) */
+        .recipe img,
+        .recipes img {
+            display: block;
+            margin: 0 auto;
+            width: 350px !important;
+            height: 200px !important;
+            object-fit: cover;
+        }
 
     </style>
 
@@ -221,7 +230,7 @@
 
         <div class="recipes">
             <div class="box recipe">
-                <a class="recipe-link" href="#" aria-label="French Fries recipe">
+                <a class="recipe-link" href="French Fries.html" aria-label="French Fries recipe">
                     <img src="media/French_Fries.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
                     <h2 style="text-align: center;">French Fries</h2>
                     <h4>French fries, a fast food staple and an appetizer kids love. It is a dish of salty and evenly cut strips of potatoes. It 
@@ -230,18 +239,18 @@
             </div>
 
             <div class="box recipe">
-                <a class="recipe-link" href="#" aria-label="Mac N' Cheese recipe">
+                <a class="recipe-link" href="Mac n Cheese.html" aria-label="J Fisher Cake Recipe">
                     <img src="media/Mac.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
-                    <h2 style="text-align: center;">Mac N' Cheese</h2>
-                    <h4>Mac and cheese is a comfort food dish made with macaroni pasta and a cheese sauce. It is a known side dish in American cuisine, often served as an appetizer or main course.
-                        Mac and cheese is creamy and cheesy, and can satisfy cravings.
+                    <h2 style="text-align: center;">Jeremiah's Dream Cake</h2>
+                    <h4> This cake shows how big of a red flag Jeremiah is. It is a towering multi-layered cake adorned with rich and glossy 
+                         decorations, symbolizing his extravagant and over-the-top personality. He was willing to spend 750 dollars on this in a budget wedding.
                     </h4>
                 </a>
 
             </div>
 
             <div class="box recipe">
-                <a class="recipe-link" href="#" aria-label="Caesar's Salad recipe">
+                <a class="recipe-link" href="recipe1.html" aria-label="Caesar's Salad recipe">
                     <img src="media/Caesar.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
                     <h2 style="text-align: center;">Caesar's Salad</h2>
                     <h4>Caesar's salad is a popular dish made with romaine lettuce, croutons, parmesan cheese, and a dressing made from anchovies, garlic, lemon juice, and olive oil. It's fresh and crunchy, making it a great way to start a meal.
