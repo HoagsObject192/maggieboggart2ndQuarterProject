@@ -188,6 +188,15 @@
             height: 100%;
         }
 
+        /* Fixed, centered images inside recipe cards (won't resize) */
+        .recipe img,
+        .recipes img {
+            display: block;
+            margin: 0 auto;
+            width: 350px !important;
+            height: 200px !important;
+            object-fit: cover;
+        }
 
     </style>
 
@@ -216,33 +225,33 @@
     </header>
 
     <main class="main">
-            <h1 style="text-align: center;">DESSERTS</h1>
+            <h1 style="text-align: center;">APPETIZERS</h1>
         <br>
 
         <div class="recipes">
             <div class="box recipe">
-                <a class="recipe-link" href="choccookies.html" aria-label="Chocolate Chip Cookies recipe">
-                    <img src="media/choccookies.png" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                <a class="recipe-link" href="French Fries.html" aria-label="French Fries recipe">
+                    <img src="media/French_Fries.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
                     <h2 style="text-align: center;">Chocolate Chip Cookies</h2>
-                    <h4>Golden-brown cookies with a chewy center are studded with rich chocolate chips. Sweet, buttery, and irresistibly soft. A nostalgic treat that melts in your mouth.</h4>
+                    <h4>Soft, chewy cookies filled with melted chocolate chips. Sweet, buttery, and comforting.h4>
                 </a>
             </div>
 
             <div class="box recipe">
-                <a class="recipe-link" href="#" aria-label="Cinnamon Rolls recipe">
-                    <img src="media/cinnaroll.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                <a class="recipe-link" href="cinnaroll.html" aria-label="Cinammon Rolls recipe">
+                    <img src="media/Mac.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
                     <h2 style="text-align: center;">Cinnamon Rolls</h2>
-                    <h4>Soft, fluffy rolls are rolled with cinnamon sugar and drizzled with icing. Warm, sweet, and gooey with every bite. Perfect for a cozy breakfast or dessert.
-                    </h4>
+                    <h4>Fluffy rolls swirled with cinnamon sugar and topped with icing. Warm, gooey, and indulgent.
                 </a>
 
             </div>
 
             <div class="box recipe">
-                <a class="recipe-link" href="#" aria-label="Jeremaiah Fisher's Dream Wedding Cake recipe">
-                    <img src="media/cake.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
-                    <h2 style="text-align: center;"> Jeremaiah Fisher's Dream Wedding Cake</h2>
-                    <h4>Light, fluffy layers are paired with silky buttercream and delicate almond flavors. Sweet, elegant, and definitely overcomplicated. Up for a challeng? try staisfying Jeremaiah Fisher.</h4>
+                <a class="recipe-link" href="jeremaiah-cake.html" aria-label="Caesar's Salad recipe">
+                    <img src="media/Caesar.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Jeremaiah Fisher's Dream Wedding Cake</h2>
+                    <h4>Tall, elegant layers with rich frosting and a soft crumb. Sweet, dramatic, and over-the-top.
+                    </h4>
                 </a>
 
             </div>            
