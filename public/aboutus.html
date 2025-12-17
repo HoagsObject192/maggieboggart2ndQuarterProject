@@ -1,238 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syntax to Spices | Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax to Spices | About Us</title>
+
+    <link rel="icon" href="media/faviconmog.png">
 
     <style>
-        *{
+        * {
             box-sizing: border-box;
-            font-family: "Comic Sans MS", Arial, sans-serif;
-
+            font-family: "Comic Sans MS", Arial, sans-serif;    
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             background-color: #fae9df;
             color: #333;
         }
 
-        .header{
-            font-family: "Amazone BT", cursive;
+        /* ===== HEADER ===== */
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 12px 20px;
+            background-color: rgba(248, 201, 212, 0.75);
             border-bottom: 4px solid #e6b3be;
-            background-color: rgba(248, 201, 212, 0.75);
-            color: #333;
         }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            border-bottom: 2px solid black;
-            background: white;
-            }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            padding: 0;
-            text-decoration: none;
-            }
-
-        .nav-links li {
-            cursor: pointer;
-            text-decoration: none;
-            }
-
-        .nav-links a,
-        .nav-links a:visited,
-        .nav-links a:active {
-            color: black;
-            text-decoration: none;
-        }
-
-
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 20px;
-            padding: 20px;
-            }
-
-        .left{
-            display: flex;
-            flex-direction: column;
-            margin-left: 100px;
-        }
-
-        .left h2 {
-            margin-bottom: 10px;
-            }
-
-        .image-box {
-            
-            }
-
-        .ingredients {
-            border: 2px solid black;
-            padding: 10px;
-            width: 90%;
-            }
-
-        .description {
-            padding: 10px;
-            margin-bottom: 20px;
-            width: 90%;
-            border: 2px solid black;
-            gap: 30px;
-            padding: 30px 40px;
-            }
-
-
-        .procedure {
-            padding: 10px;
-            margin-bottom: 20px;
-            width: 90%;
-            border: 2px solid black;
-            gap: 30px;
-            padding: 30px 40px;
-            }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            border-top: 4px solid #e6b3be;
-            background-color: rgba(248, 201, 212, 0.75);
-            }
-
-        a:hover {
-            background-color: pink;
-            font-size: 17px;
-            border-radius: 25px;
-            text-decoration: none;
-            }
-
-        a:visited {
-             color: rgb(0, 0, 0);
-             text-decoration: none;
-            }
 
         .logo {
-            font: "Amazone BT", cursive;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-family: "Amazone BT", cursive;
         }
 
-        .box {
-            border: 2px solid #444;
-            padding: 16px 18px;
+        nav a {
+            margin-left: 18px;
+            text-decoration: none;
+            color: black;
+        }
+
+        nav a:hover {
+            background-color: pink;
+            padding: 4px 8px;
+            border-radius: 20px;
+        }
+
+        /* ===== MAIN ===== */
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        
+        .about-row {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        .about-row.reverse {
+            grid-template-columns: 1fr 380px;
+        }
+
+        .about-img {
+            width: 100%;
+            border: 4px solid black;
             border-radius: 6px;
         }
 
+        .box {
+            background-color: #f7cfd8;
+            border: 2px solid black;
+            padding: 25px 30px;
+            border-radius: 6px;
+        }
 
+        .box h3 {
+            margin-bottom: 10px;
+        }
+
+        
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 12px;
+            background-color: rgba(248, 201, 212, 0.75);
+            border-top: 4px solid #e6b3be;
+            margin-top: 40px;
+        }
     </style>
-
-    <link rel="icon" href="media/faviconmog.png">
-
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="logo">
-            <img src="media/faviconmog.png" alt="Site icon" class="favicon" width="64" height="64">
-            <span>Syntax to Spices</span>
-        </div>
-        <nav>
-        <ul class="nav-links">
-            <a href="homepage.html">Home</a>
-            <a href="cooking-basics.html">Cooking Basics</a>
-            <a href="appetizers.html">Appetizers</a>
-            <a href="mains.html">Mains</a>
-            <a href="desserts.html">Desserts</a>
-            <a href="indecisive.html">Indecisive</a>
-            <a href="playlists.html">Playlists</a>
-        </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo">
+        <img src="media/faviconmog.png" alt="icon" width="60">
+        <span>Syntax to Spices</span>
+    </div>
 
-    <div class="container">
-        <div class="left">
-            <h1>French Fries</h1>
-        </div>
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="cooking-basics.html">Cooking Basics</a>
+        <a href="appetizers.html">Appetizers</a>
+        <a href="mains.html">Mains</a>
+        <a href="desserts.html">Desserts</a>
+        <a href="indecisive.html">Indecisive</a>
+        <a href="playlists.html">Playlists</a>
+    </nav>
+</header>
 
-        <br>
+<main>
 
-        <div class="image-box">
-            <img src="media/French_Fries.jpg" width="100%" style="border: 5px solid; max-width: 380px; border-radius: 6px; margin-left: 100px;">
-        </div>
+    <h1>Recipe of Creation: Syntax to Spices</h1>
 
-            <div class="right">
-        <div class="box description">
-            <h3>Description</h3>
+    <section class="about-row">
+        <img src="media/jai2.png" alt="Jairo" class="about-img">
+
+        <div class="box">
+            <h3>site creator: jairo reolizo</h3>
             <p>
-                French fries, a fast food staple and an appetizer kids love. It is a dish of salty and evenly cut strips of potatoes. It 
-                can be made in many ways, as thickness and cooking methods can vary.
+                Jairo himself is a HUGEEEEEEE food enthusiast. It may not look like it but this 
+                guy eats ALOT; in a good way, meaning he has always had a value of apprecciating food.
+                His interest in cooking is inspired by his family, (and also for the sake of having
+                in his terms "aura"). Jairo also enjoys cooking for, and in front of his friends,
+                always putting on a show. As good humored person, Jairo likes entertaining while cooking good food ( his favourite is steak)
+                and so he sometimes puts on cooking shows when on vc with his friends. Of course,  aside from the entertainment
+                Jairo also cooks tasty food (even if maggie once watched him claim a raw steak was cooked). He saw this site
+                as another opportunity to show his appreciation for food.
+                <br>
+                <br>
+                contact me || email: b2029jsoreolizo@gmail.com || instagram: j.valor1
+            </p>
+        </div>
+    </section>
+
+    
+    <section class="about-row reverse">
+        <div class="box">
+            <h3>site creator: maggie tan</h3>
+            <p>
+                Maggie grew up in a family that LOVES cooking. Her grandma is a baker with her own 
+                bakeshop, and her dad, well..2. aside from being the franchiser of a fast food company,
+                is also a huge food enthusiast. As you can imagine, not a week goes by without Maggie 
+                receiving freshly baked goods from her grandma or her dad experimenting on food for 
+                dinner. This inspired Maggie to get into culinary, specifically baking, and 
+                eventually she grew into a determined recipe collector. She wanted to find a way to 
+                present the recipes she has collected in a way that was more accessible given the 
+                present period, and this cs project gave her the oppurtunity to do so.
+                <br>
+                <br>
+                contact me || email: magsaccs811@gmail.com || instagram: miso_mooncake
             </p>
         </div>
 
-        <div class="image-box">
-            <img src="media/border.png" width="100%" style="border: 5px solid; max-width: 380px; border-radius: 6px; margin-left: 100px;">
+        <img src="media/mags1.png" alt="Maggie" class="about-img">
+    </section>
+
+    
+    <section class="bottom-grid">
+        <div class="box">
+            <h3>Ingredients Checklist</h3>
+            <ul>
+                <li><input type="checkbox"> 1 Jairo Reolizo</li>
+                <li><input type="checkbox"> 1 Maggie Tan</li>
+                <li><input type="checkbox"> 1 Friendship</li>
+                <li><input type="checkbox"> Love for collecting recipes</li>
+                <li><input type="checkbox"> Appreciation for food</li>
+                <li><input type="checkbox"> Patience to Program a Website</li>
+                <li><input type="checkbox"> 1 goated CS teacher</li>
+                <li><input type="checkbox"> 1 late submission (we're so sorry sir :( )</li>
+                <li><input type="checkbox"> 1 website logo</li>
+                <li><input type="checkbox"> 1 will to lose sleep on the proj</li>
+                <li><input type="checkbox"> 1 will to work hard on the proj</li>
+                <li><input type="checkbox"> 1 drop of blood, 1 drop of sweat, 1 drop of tears</li>
+                <li><input type="checkbox"> 1 dream</li>
+            </ul>
         </div>
 
-        <br>
-
-        
-        <div class="box procedure">
+        <div class="box">
             <h3>Procedure</h3>
             <ol>
-                <li>This is a step in the procedure</li>
-                <li>This is a step in the procedure</li>
-                <li>This is a step in the procedure</li>
-                <li>This is a step in the procedure</li>
+        <ul>
+        <li>Mix Jairo and Maggie as classmates for two years and add in the friendship.</li>
+        <li>Allow them to realize they both have interests in the culinary world. </li>
+        <li>Add alot of interest for collecting recipes and appreciating food</li>
+        <li>Make them groupmates for cs second quarter. Add in Sir Roy, the goated CS teacher to present the project and teach web page creation.</li>
+        <li>1 dream should be formed by the ingredients in the previous step.</li>
+        <li>Allow Jai to create a cute website logo to use with Reeva Tapia's procreate account (credits to reeva tapia of 9 - Strontium).</li>
+        <li>Roll/ organize the project setup into a project outline.</li>
+        <li>Bake under the struggles of procrastination, consistent deadlines, and constant fatigue.</li>
+        <li>Let the project chill (for too long) unti the very last minute.</li>
+        <li>Vigorously mold with the will to lose sleep, the drops of blood sweat and tears, and the simple will to work hard on the project.</li>
+        <li>Submit the website a day late.</li>
+        <li>Preserve and improve the will to work harder on this website.</li>
+        </ul>
             </ol>
         </div>
+    </section>
 
-        
-    </div>
+</main>
 
-    <div class="box ingredients">
-            <h3>Ingredients</h3>
-            <ul>
-                <li><input type="checkbox">Potatoes</li>
-                <li><input type="checkbox">Oil</li>
-                <li><input type="checkbox">Salt</li>
-        </div>
+<footer>
+    © Jairo Stian Reolizo | Audrey Margaret Tan
+</footer>
 
-
-
-    </div>
-
-
-   <!-- <div class="layout">
-    <aside class="sidebar">
-        <nav>
-            <a href="cooking-basics.html">Cooking Basics</a>
-            <a href="appetizers.html">Appetizers</a>
-            <a href="mains.html">Mains</a>
-            <a href="desserts.html">Desserts</a>
-            <a href="indecisive.html">Indecisive</a>
-            <a href="playlists.html">Playlists</a>
-        </nav>
-    </aside>
-    </div> -->
-
-
-    <footer>
-        © Jairo Stian Reolizo | Audrey Margaret Tan
-    </footer>
 </body>
 </html>

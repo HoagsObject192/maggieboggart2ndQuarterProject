@@ -252,7 +252,6 @@
 
         .side-group summary {
             list-style: none;
-            -webkit-appearance: none;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -463,6 +462,11 @@
                     <a href="playlists.html">Playlists</a>
                 </div>
             </details>
+
+            <details class="side-group" aria-label="just a sign lol">
+                <summary class="side-btn">Click the Moggart Logo to learn more about us --></summary>
+            </details>
+
         </div>
         <div class="content-area">
             <h1 style="text-align: center;">Chef Moggart's Reccomendation</h1>
@@ -493,7 +497,7 @@
         </div>
 
     </main>
-
+    
     <script>
         
         document.querySelectorAll('.side-group summary').forEach(summary => {
@@ -550,7 +554,7 @@
                     title: "Caesar's Salad",
                     img: "media/Caesar.jpg",
                     desc: "Fresh romaine, crunchy croutons, and zesty dressing — a bright way to start any meal.",
-                    href: "recipe1.html"
+                    href: "caesar.html"
                 }
             ];
 
@@ -574,7 +578,7 @@
                     titleEl.textContent = d.title;
                     descEl.textContent = d.desc;
                     linkEl.href = d.href;
-                    // in
+                    
                     boxEl.classList.remove('fade-out');
                     boxEl.classList.add('fade-in');
                 }, 420);
@@ -587,10 +591,10 @@
                 showDish(idx);
             }
 
-            // show dish for minute
+            // showing dish
             updateToCurrentMinute();
 
-            // first update then every 1 min
+            // dish ever 1 min
             function scheduleNext(){
                 const now = new Date();
                 const msUntilNext = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
