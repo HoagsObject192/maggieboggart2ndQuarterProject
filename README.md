@@ -4,10 +4,10 @@
 ## **Made by STEM students, for STEM students.**
 
 ## requirements (erase before submitting)
-- ##final title
-- ##features minimum 3
+- ##final title --
+- ##features minimum 3 --
 - works on mobile
-- ##details state where the form is and what u do with user data
+- ##details state where the form is and what u do with user data --
 - ##definition of done
 
 ## **I. Description**
@@ -94,6 +94,14 @@ Meet our mascot Moggart!!!!
 ### Playlist Page
 ![Playlists Page](https://github.com/user-attachments/assets/d4d62776-b565-4081-bb34-4ceb8f905569)
 
-## **VI. Feautures**
+## **VI. FEATURES**
+* **Search Bar** - This is for the user to search for recipes across the site. Users can even search "keywords" such as quick or warm if they want to search for recipes under a more general theme. This is where the **form** aspect of the site comes in since users input recipe names or keywords and the website outputs the recipes related to the input.
+*  **Rating System** - A star rating system ranging from 0-5 stars where users can rate how they find each recipe in general (meaning as a summation of the recipe in terms of time, difficulty, clarity, experience, and of course, taste.
+*  **Recipe Posting** - A feature where cite users can post their own recipes on the site in different categories. The posted recipes will be saved on the site and will be available for other site users to see and use.
+
+*  
+
+
+
 
 
