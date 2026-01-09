@@ -3,12 +3,6 @@
 ## **Cooked.**
 ## **Made by STEM students, for STEM students.**
 
-## requirements (erase before submitting)
-- ##final title --
-- ##features minimum 3 --
-- works on mobile
-- ##details state where the form is and what u do with user data --
-- ##definition of done
 
 ## **I. Description**
 ### Cooked. is inspired by our busy lives juggling pre-lab requirements, class projects, and study sessions, mixed with Jairo’s love for eating, and Maggie’s love for collecting recipes, this site aims to prove that even the busiest and the most tired learners can cook up something simple and satisfying. It features both original and curated recipes all carefully chosen based on practicality, accessibility and most importantly, taste. 
