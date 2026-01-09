@@ -7,7 +7,7 @@
 ## **I. Description**
 ### Cooked. is inspired by our busy lives juggling pre-lab requirements, class projects, and study sessions, mixed with Jairo’s love for eating, and Maggie’s love for collecting recipes, this site aims to prove that even the busiest and the most tired learners can cook up something simple and satisfying. It features both original and curated recipes all carefully chosen based on practicality, accessibility and most importantly, taste. 
 
-### Just like programming, cooking involves following procedures, adjusting when things go wrong, and taking pride in what you create. Each recipe is written like readable code that always compiles to something tasty. In the end, syntax and spices is about learning, experimenting, and realizing that a well balanced life is composed of structure, your syntax, and your own zest for life,  your spice.
+### The name is derived from the genz slang term "im so cooked" or "we're so cooked" often said by students when foreseeing a negative outcome in performance grades or asessments. This website aims to help students feel a little less cooked by providing easy recipes that will help them deal with the academic workload. 
 
 ## **II. Logo** 
 
