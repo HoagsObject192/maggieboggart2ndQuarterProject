@@ -99,7 +99,9 @@ Meet our mascot Moggart!!!!
 *  **Rating System** - A star rating system ranging from 0-5 stars where users can rate how they find each recipe in general (meaning as a summation of the recipe in terms of time, difficulty, clarity, experience, and of course, taste.
 *  **Recipe Posting** - A feature where cite users can post their own recipes on the site in different categories. The posted recipes will be saved on the site and will be available for other site users to see and use.
 
-*  
+## **VII. DEFINITION OF DONE**
+Being done for us in our case, for one, is that it is fully functional. It is able to serve its purpose as an at-home menu for cravings you wouldn’t have known about if you haven’t looked at the website. For the website to also be done, it also must be clean, organized, and appealing to the eye even on mobile as it is part of the requirements. It also must  be easy to navigate with just the right amount of buttons. It also must be website also must contain all of the needed content and information. All images should be there and all links/buttons lead to the right pages, and everything functions properly. All of the special features from the posts should also be incorporated. We want it to feel like LetterBoxd an Facebook as one site, but instead of movies and random people from the internet, you’re looking at food recipes from random people. We really want it to stand out. Thoughaside from the content and visuals, stuff like the code and file names must also be organized. 
+
 
 
 
