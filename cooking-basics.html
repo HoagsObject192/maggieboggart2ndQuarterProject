@@ -23,6 +23,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            height: 100vh;
         }
 
         .header{
@@ -163,6 +164,7 @@
             margin: 0;
             width: 100%;
             max-width: 400px;
+            height: 350px;
             gap: 30px;
             background-color: #e6b3be;
             color: aliceblue;
@@ -171,6 +173,22 @@
             transform-origin: center;
             will-change: transform;
             position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recipe h2,
+        .recipe h4 {
+            margin: 5px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .recipe h4 {
+            -webkit-line-clamp: 3;
         }
 
         .recipe:hover {
@@ -188,6 +206,15 @@
             height: 100%;
         }
 
+        
+        .recipe img,
+        .recipes img {
+            display: block;
+            margin: 0 auto;
+            width: 350px !important;
+            height: 200px !important;
+            object-fit: cover;
+        }
 
     </style>
 
@@ -225,6 +252,13 @@
                     <img src="media/cb.png" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
                     <h2 style="text-align: center;">Chopping Board Basics</h2>
                     <h4>A guide to different ways of cutting food, including some cool vocabulary.</h4>
+                </a>
+            </div>
+            <div class="box recipe">
+                <a class="recipe-link" href="cb.html" aria-label="Different Ways of Cooking">
+                    <img src="media/cb.png" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Different Ways of Cooking</h2>
+                    <h4>A guide to different ways of cooking food, including some cool vocabulary.</h4>
                 </a>
             </div>
 
