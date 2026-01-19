@@ -1,12 +1,13 @@
+# Q3 Proposal Updates
 # **Team Name: WDProjStrontiumReolizoTan**
-# **Syntax to Spices**
+## **Cooked.**
 ## **Made by STEM students, for STEM students.**
 
 
 ## **I. Description**
-### Syntax to Spices is inspired by our busy lives juggling pre-lab requirements, class projects, and study sessions, mixed with Jairo’s love for eating, and Maggie’s love for collecting recipes, this site aims to prove that even the busiest and the most tired learners can cook up something simple and satisfying. It features both original and curated recipes all carefully chosen based on practicality, accessibility and most importantly, taste. 
+### Cooked. is inspired by our busy lives juggling pre-lab requirements, class projects, and study sessions, mixed with Jairo’s love for eating, and Maggie’s love for collecting recipes, this site aims to prove that even the busiest and the most tired learners can cook up something simple and satisfying. It features both original and curated recipes all carefully chosen based on practicality, accessibility and most importantly, taste. 
 
-### Just like programming, cooking involves following procedures, adjusting when things go wrong, and taking pride in what you create. Each recipe is written like readable code that always compiles to something tasty. In the end, syntax and spices is about learning, experimenting, and realizing that a well balanced life is composed of structure, your syntax, and your own zest for life,  your spice.
+### The name is derived from the genz slang term "im so cooked" or "we're so cooked" often said by students when foreseeing a negative outcome in performance grades or asessments. This website aims to help students feel a little less cooked by providing easy recipes that will help them deal with the academic workload. 
 
 ## **II. Logo** 
 
@@ -86,3 +87,17 @@ Meet our mascot Moggart!!!!
 
 ### Playlist Page
 ![Playlists Page](https://github.com/user-attachments/assets/d4d62776-b565-4081-bb34-4ceb8f905569)
+
+## **VI. FEATURES**
+* **Search Bar** - This is for the user to search for recipes across the site. Users can even search "keywords" such as quick or warm if they want to search for recipes under a more general theme. This is where the **form** aspect of the site comes in since users input recipe names or keywords and the website outputs the recipes related to the input.
+*  **Rating System** - A star rating system ranging from 0-5 stars where users can rate how they find each recipe in general (meaning as a summation of the recipe in terms of time, difficulty, clarity, experience, and of course, taste.
+*  **Recipe Posting** - A feature where cite users can post their own recipes on the site in different categories. The posted recipes will be saved on the site and will be available for other site users to see and use.
+
+## **VII. DEFINITION OF DONE**
+Being done for us in our case, for one, is that it is fully functional. It is able to serve its purpose as an at-home menu for cravings you wouldn’t have known about if you haven’t looked at the website. For the website to also be done, it also must be clean, organized, and appealing to the eye even on mobile as it is part of the requirements. It also must  be easy to navigate with just the right amount of buttons. It also must be website also must contain all of the needed content and information. All images should be there and all links/buttons lead to the right pages, and everything functions properly. All of the special features from the posts should also be incorporated. We want it to feel like LetterBoxd an Facebook as one site, but instead of movies and random people from the internet, you’re looking at food recipes from random people. We really want it to stand out. Thoughaside from the content and visuals, stuff like the code and file names must also be organized. 
+
+
+
+
+
+
