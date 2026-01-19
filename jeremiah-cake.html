@@ -14,10 +14,11 @@
 
         body {
             margin: 0;
-            background-color: #fae9df;
+            background-color: #ffffff;
             color: #333;
             line-height: 1.6;
             font-size: 16px;
+            padding-top: 100px;
         }
 
         .header{
@@ -29,6 +30,12 @@
             border-bottom: 4px solid #e6b3be;
             background-color: rgba(248, 201, 212, 0.75);
             color: #333;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         .navbar {
@@ -231,7 +238,7 @@
 
 </head>
 
-<body>
+<body data-recipe-id="jeremiah-cake">
 
     <header class="header">
         <div class="logo">
@@ -253,7 +260,7 @@
 
    <div class="container">
         <div class="left">
-            <h1>Jeremiah Fisher's Dream Wedding Cake</h1>
+            <h1>Jeremiah Fishers Dream Wedding Cake</h1>
         </div>
 
         <br>
@@ -289,6 +296,10 @@
                     <li><input type="checkbox">1 cup cocoa powder</li>
                     <li><input type="checkbox">1 cup + 2 tbsp. white sugar</li>
                 </ul>
+            </div>
+            <div class="box rating-box">
+                <h3>Rating</h3>
+                <div class="recipe-rating"></div>
             </div>
         </div>
 
@@ -335,5 +346,6 @@
     <footer>
         © Jairo Stian Reolizo | Audrey Margaret Tan
     </footer>
+    <script src="ratings.js"></script>
 </body>
 </html>

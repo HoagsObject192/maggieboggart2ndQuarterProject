@@ -98,7 +98,7 @@
 
         body {
             margin: 0;
-            background-color: #fae9df;
+            background-color: #ffffff;
             color: #333;
         }
 
@@ -209,7 +209,7 @@
 
 </head>
 
-<body>
+<body data-recipe-id="recipe1">
 
     <header class="header">
         <div class="logo">
@@ -245,6 +245,12 @@
                 <li><input type="checkbox">Ingredient 2</li>
                 <li><input type="checkbox">Ingredient 3</li>
                 <li><input type="checkbox">Ingredient 4</li>
+            </ul>
+        </div>
+
+        <div class="box rating-box">
+            <h3>Rating</h3>
+            <div class="recipe-rating" aria-hidden="false"></div>
         </div>
     </div>
 
@@ -274,5 +280,6 @@
     <footer>
         © Jairo Stian Reolizo | Audrey Margaret Tan
     </footer>
+    <script src="ratings.js"></script>
 </body>
 </html>

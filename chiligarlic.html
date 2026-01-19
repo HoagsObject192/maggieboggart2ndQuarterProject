@@ -14,10 +14,11 @@
 
         body {
             margin: 0;
-            background-color: #fae9df;
+            background-color: #ffffff;
             color: #333;
             line-height: 1.6;
             font-size: 16px;
+            padding-top: 100px;
         }
 
         .header{
@@ -29,6 +30,12 @@
             border-bottom: 4px solid #e6b3be;
             background-color: rgba(248, 201, 212, 0.75);
             color: #333;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         .navbar {
@@ -232,7 +239,7 @@
 
 </head>
 
-<body>
+<body data-recipe-id="chili-garlic-noodles">
 
     <header class="header">
         <div class="logo">
@@ -262,9 +269,9 @@
         <div class="image-box">
             <img src="media/chili.png" alt="Chili noodles">
 
-            <div class="box ingredients">
-                <h3>Ingredients</h3>
-              <ul>
+                        <div class="box ingredients">
+                                <h3>Ingredients</h3>
+                            <ul>
                 <li><input type="checkbox"> Wheat noodles (dried broad or egg noodles)</li>
                 <li><input type="checkbox"> Dried chillies or chilli flakes</li>
                 <li><input type="checkbox"> Chilli powder (Korean gochugaru or hot chilli powder)</li>
@@ -278,6 +285,10 @@
                 <li><input type="checkbox"> Spring onions, chopped</li>
                 <li><input type="checkbox"> Coriander, chopped</li>
                 </ul>
+            </div>
+            <div class="box rating-box">
+                <h3>Rating</h3>
+                <div class="recipe-rating"></div>
             </div>
         </div>
 
@@ -322,5 +333,6 @@
     <footer>
         © Jairo Stian Reolizo | Audrey Margaret Tan
     </footer>
+    <script src="ratings.js"></script>
 </body>
 </html>
