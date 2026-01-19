@@ -18,11 +18,12 @@
 
         body {
             margin: 0;
-            background-color: #fae9df;
+            background-color: #ffffff;
             color: #333;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            padding-top: 100px;
         }
 
         .header{
@@ -34,6 +35,12 @@
             border-bottom: 4px solid #e6b3be;
             background-color: rgba(248, 201, 212, 0.75);
             color: #333;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         .navbar {
@@ -188,6 +195,12 @@
             height: 100%;
         }
 
+        /* Simple layout for indecisive form */
+        .indecisive-box { max-width:720px; margin:20px auto; }
+        .indecisive-grid { display:flex; gap:12px; flex-wrap:wrap; }
+        .indecisive-grid label { flex:1; min-width:160px; display:flex; flex-direction:column; }
+        .indecisive-actions { margin-top:12px; display:flex; gap:8px; align-items:center; }
+
 
     </style>
 
@@ -228,6 +241,55 @@
 
                   
         </div>
+        <section class="box indecisive-box">
+            <h2 style="text-align:left;margin-top:0">Not Sure What To Cook?</h2>
+            <p>Answer a few quick questions and we'll recommend recipes.</p>
+            <form id="indecisive-form" class="indecisive-form">
+                <div class="indecisive-grid">
+                    <label>Taste
+                        <select name="taste">
+                            <option value="any">Any</option>
+                            <option value="spicy">Spicy</option>
+                            <option value="sweet">Sweet</option>
+                            <option value="savory">Savory</option>
+                        </select>
+                    </label>
+                    <label>Meal type
+                        <select name="meal">
+                            <option value="any">Any</option>
+                            <option value="main">Main</option>
+                            <option value="appetizer">Appetizer</option>
+                            <option value="dessert">Dessert</option>
+                        </select>
+                    </label>
+                    <label>Time
+                        <select name="time">
+                            <option value="any">Any</option>
+                            <option value="quick">Under 20 min</option>
+                            <option value="medium">20-40 min</option>
+                            <option value="long">Over 40 min</option>
+                        </select>
+                    </label>
+                    <label>Vegetarian
+                        <select name="veg">
+                            <option value="any">Any</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="indecisive-actions">
+                    <button type="submit">Get Recommendations</button>
+                    <label>Or
+                        <select name="surprise">
+                            <option value="no">No</option>
+                            <option value="yes">Surprise me</option>
+                        </select>
+                    </label>
+                </div>
+            </form>
+            <div id="indecisive-results"></div>
+        </section>
 
             
         
@@ -242,5 +304,6 @@
     <footer>
         © Jairo Stian Reolizo | Audrey Margaret Tan
     </footer>
-</body>
+    <script src="indecisive.js"></script>
+ </body>
 </html>
