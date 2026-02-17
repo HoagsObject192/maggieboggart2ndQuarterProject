@@ -479,6 +479,105 @@
         .indecisive-grid label { flex:1; min-width:160px; display:flex; flex-direction:column; }
         .indecisive-actions { margin-top:12px; display:flex; gap:8px; align-items:center; }
 
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px 10px;
+            }
+
+            .description,
+            .procedure {
+                width: 95%;
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .recipes {
+                padding: 0 10px;
+                gap: 15px;
+            }
+
+            .recipe {
+                max-width: 300px;
+            }
+
+            .indecisive-grid {
+                gap: 8px;
+            }
+
+            .indecisive-grid label {
+                min-width: 130px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whisk-btn {
+                top: 15px;
+                left: 15px;
+                font-size: 24px;
+            }
+
+            .main {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .description,
+            .procedure {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 15px;
+            }
+
+            .recipes {
+                padding: 0 10px;
+                gap: 10px;
+            }
+
+            .recipe {
+                max-width: 250px;
+                padding: 8px;
+            }
+
+            .recipe h3 {
+                font-size: 16px;
+            }
+
+            .recipe p {
+                font-size: 12px;
+            }
+
+            .indecisive-box {
+                margin: 10px auto;
+            }
+
+            .indecisive-grid {
+                gap: 8px;
+                flex-direction: column;
+            }
+
+            .indecisive-grid label {
+                min-width: auto;
+                width: 100%;
+                font-size: 13px;
+            }
+
+            .indecisive-actions {
+                margin-top: 10px;
+                gap: 5px;
+                flex-wrap: wrap;
+            }
+
+            footer {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
 
     </style>
 

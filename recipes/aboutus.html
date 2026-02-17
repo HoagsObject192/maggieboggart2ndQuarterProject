@@ -109,7 +109,7 @@
 
 .search-section {
   background: white;
-  padding: 40px 20px 15px 20px;
+  padding: 40px 60px 15px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,8 +143,10 @@
 .search-results {
   width: 100%;
   max-width: 1400px;
-  padding: 0 20px;
+  padding: 0 60px;
   margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .search-results-horizontal {
@@ -296,8 +298,10 @@
         /* ===== MAIN ===== */
         main {
             max-width: 1200px;
-            margin: auto;
-            padding: 30px 20px;
+            margin: 0 auto;
+            padding: 30px 60px;
+            margin-left: 80px;
+            margin-right: 80px;
         }
 
         h1 {
@@ -359,6 +363,117 @@
             background-color: rgba(248, 201, 212, 0.75);
             border-top: 4px solid #e6b3be;
             margin-top: 40px;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            main {
+                padding: 30px 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .search-section {
+                padding: 30px 20px 15px 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+                width: calc(100% - 40px);
+            }
+
+            .search-results {
+                width: calc(100% - 40px);
+                padding: 0 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 1.3rem !important;
+            }
+
+            .about-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .about-row.reverse {
+                grid-template-columns: 1fr;
+            }
+
+            .bottom-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 10px 15px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            .whisk-btn {
+                top: 20px;
+                left: 20px;
+                font-size: 24px;
+            }
+
+            .side-menu li {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 20px 15px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .search-section {
+                padding: 20px 15px 10px 15px;
+                margin-left: 10px;
+                margin-right: 10px;
+                width: calc(100% - 20px);
+            }
+
+            .search-results {
+                width: calc(100% - 20px);
+                padding: 0 15px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            h1 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 1rem !important;
+            }
+
+            .box {
+                padding: 15px 20px;
+            }
+
+            .search-container {
+                flex-direction: column;
+            }
+
+            .recipe-card {
+                width: 180px;
+            }
+
+            .recipe-card img {
+                height: 110px;
+            }
         }
     </style>
 </head>

@@ -417,6 +417,92 @@
             object-fit: cover;
         }
 
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .description,
+            .procedure {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .recipes {
+                gap: 15px;
+                padding: 0 10px;
+            }
+
+            .recipe {
+                max-width: 300px;
+                height: 320px;
+            }
+
+            .recipe img,
+            .recipes img {
+                width: 280px !important;
+                height: 160px !important;
+            }
+
+            .recipe h2,
+            .recipe h4 {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whisk-btn {
+                top: 15px;
+                left: 15px;
+                font-size: 24px;
+            }
+
+            h1 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            .description,
+            .procedure {
+                width: 90%;
+                padding: 15px;
+                margin-left: 5%;
+            }
+
+            .recipes {
+                gap: 10px;
+                padding: 0 10px;
+            }
+
+            .recipe {
+                max-width: 250px;
+                height: auto;
+                padding: 8px;
+            }
+
+            .recipe h2 {
+                font-size: 13px;
+            }
+
+            .recipe h4 {
+                font-size: 11px;
+                -webkit-line-clamp: 2;
+            }
+
+            .recipe img,
+            .recipes img {
+                width: 200px !important;
+                height: 120px !important;
+            }
+
+            footer {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+
     </style>
 
     <link rel="icon" href="media/faviconmog.png">
