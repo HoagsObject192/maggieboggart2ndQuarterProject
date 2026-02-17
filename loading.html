@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading - Cooked</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Varela Round", sans-serif;
+      overflow: hidden;
+    }
+
+    .loading-container {
+      height: 100vh;
+      background-color: #f1d2e1; /* Pink */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rotating-cat {
+      width: 150px;
+      height: 150px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <img src="media/moggart.png" class="rotating-cat" alt="Loading...">
+  </div>
+</body>
+</html>
