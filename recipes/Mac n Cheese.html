@@ -296,6 +296,15 @@
             background-color: #e6b3be;
         }
 
+        .image-box img {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
         
         .ingredients ul {
             list-style: none;
@@ -602,15 +611,15 @@
     </footer>
 <script>
 const recipes = [
-  { name: "Burger", image: "media/burger.png", desc: "Classic beef burger", link: "burger.html" },
-  { name: "Tacos", image: "media/tacos.png", desc: "Delicious tacos", link: "tacos.html" },
-  { name: "Caesar Salad", image: "media/caesar.png", desc: "Fresh Caesar salad", link: "caesar.html" },
-  { name: "Chili Garlic", image: "media/chiligarlic.png", desc: "Spicy chili garlic dish", link: "chiligarlic.html" },
-  { name: "Chocolate Cookies", image: "media/choccookies.png", desc: "Delicious chocolate cookies", link: "choccookies.html" },
-  { name: "Cinnamon Roll", image: "media/cinnaroll.png", desc: "Sweet cinnamon rolls", link: "cinnaroll.html" },
-  { name: "Mac n Cheese", image: "media/Mac n Cheese.png", desc: "Creamy mac and cheese", link: "Mac n Cheese.html" },
-  { name: "French Fries", image: "media/French Fries.png", desc: "Crispy french fries", link: "French Fries.html" },
-  { name: "Jeremiah Cake", image: "media/jeremiah-cake.png", desc: "Special Jeremiah cake", link: "jeremiah-cake.html" }
+  { name: "Burger", image: "media/burger.png", desc: "A juicy beef patty is paired with melted cheese, fresh lettuce, and ripe tomatoes inside a soft bun. Each bite balances tender meat, crisp veggies, and pillowy bread. The ultimate comfort food classic.", link: "burger.html" },
+  { name: "Tacos", image: "media/tacos.png", desc: "Tender, seasoned chicken is tucked into warm tortillas with fresh toppings like salsa and cilantro. Smoky, savory spices mingle with bright, zesty notes. A flavorful and fun handheld meal.", link: "tacos.html" },
+  { name: "Chocolate Chip Cookies", image: "media/choccookies.png", desc: "Golden-brown cookies with a chewy center are studded with rich chocolate chips. Sweet, buttery, and irresistibly soft. A nostalgic treat that melts in your mouth.", link: "choccookies.html" },
+  { name: "Caesar Salad", image: "media/Caesar.jpg", desc: "Crisp romaine lettuce is tossed in a creamy, garlicky dressing with Parmesan and crunchy croutons. Each bite is fresh and savory, with a satisfying crunch. A classic salad that feels both light and indulgent.", link: "caesar.html" },
+  { name: "French Fries", image: "media/French_Fries.jpg", desc: "French fries, a fast food staple and an appetizer kids love. It is a dish of salty and evenly cut strips of potatoes. It can be made in many ways, as thickness and cooking methods can vary.", link: "French%20Fries.html" },
+  { name: "Cinnamon Roll", image: "media/cinnamon.png", desc: "Cinnamon rolls originated in Northern Europe, particularly Sweden, where kanelbullar became a traditional sweet bread enjoyed with coffee. They have a warm, comforting flavor profile dominated by aromatic cinnamon, rich butter, and soft yeasty dough.", link: "cinnaroll.html" },
+  { name: "Chili Garlic Pasta", image: "media/chili.png", desc: "Slippery noodles are coated in a spicy, aromatic chili-garlic sauce. Chewy noodles meet bold, savory flavors in every bite. A comforting dish with a satisfying kick.", link: "chiligarlic.html" },
+  { name: "Mac n Cheese", image: "media/Mac.jpg", desc: "Mac and cheese is a comfort food dish made with macaroni pasta and a cheese sauce. It is a known side dish in American cuisine, often served as an appetizer or main course. Mac and cheese is creamy and cheesy.", link: "Mac%20n%20Cheese.html" },
+  { name: "Jeremiah Cake", image: "media/Jeremiah.jpg", desc: "This cake shows how big of a red flag Jeremiah is. It is a towering multi-layered cake adorned with rich and glossy decorations, symbolizing his extravagant and over-the-top personality.", link: "jeremiah-cake.html" }
 ];
 
 function performSearch() {
