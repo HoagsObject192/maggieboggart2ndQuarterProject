@@ -35,7 +35,8 @@
         box-sizing:border-box;
         max-width:480px;
         width:100%;
-        border-radius:6px
+        border-radius:6px;
+        min-height:200px
         }
 
         .rating-box h3
@@ -45,29 +46,50 @@
         .recipe-rating
         {
         display:flex;
-        gap:8px;
-        align-items:center;
+        flex-wrap:wrap;
+        gap:4px;
+        align-items:flex-start;
         user-select:none;
-        justify-content:flex-start
+        justify-content:center
         }
 
         .recipe-rating .star
         {
         cursor:pointer;
-        color:#ccc;
-        transition:color .12s;
-        margin-right:6px;
-        border:none;
+        color:white;
+        transition:color .12s, font-size .12s;
+        margin-right:0px;
         background:transparent;
-        padding:2px;
+        padding:0px;
         line-height:1;
-        font-size:80px;
+        font-size:70px;
         display:inline-flex;
         align-items:center;
         justify-content:center;
-        width:80px;height:80px}
-        .recipe-rating .star.rated{color:orange}
-        .recipe-rating .star:focus{outline:3px solid #ddd}
+        width:75px;height:75px;
+        border:none;
+        flex-shrink:0;
+        outline:none
+        }
+        .recipe-rating .star.enlarged{font-size:85px}
+        .recipe-rating .star.rated{color:#FCD639}
+        .recipe-rating .clear-btn
+        {
+        background-color:#fff;
+        border:2px solid black;
+        padding:8px 12px;
+        font-size:14px;
+        cursor:pointer;
+        border-radius:4px;
+        transition:all .12s;
+        font-family:"Varela Round",sans-serif;
+        flex-basis:100%;
+        width:100%
+        }
+        .recipe-rating .clear-btn:hover
+        {
+        background-color:#f1d2e1;
+        }
       `;
     document.head.appendChild(s);
   }
@@ -88,39 +110,49 @@
       btn.setAttribute('title', i + ' star');
       if(i <= current) btn.classList.add('rated');
 
-        btn.addEventListener('click', ()=>{
-          const prev = getRating(recipeId);
-          const newRating = (prev === i) ? 0 : i; 
-          setRating(recipeId, newRating);
-          updateStars(container, newRating);
-        });
+      btn.addEventListener('click', ()=>{
+        setRating(recipeId, i);
+        updateStars(container, i);
+      });
 
       btn.addEventListener('keydown', (e)=>{
         if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
       });
 
-      btn.addEventListener('mouseover', ()=> highlight(container, i));
-      btn.addEventListener('focus', ()=> highlight(container, i));
-      btn.addEventListener('mouseout', ()=> highlight(container, 0));
-      btn.addEventListener('blur', ()=> highlight(container, 0));
+      btn.addEventListener('mouseover', ()=>{
+        const stars = container.querySelectorAll('.star');
+        stars.forEach(s=>{
+          const v = Number(s.dataset.value);
+          if(v <= i) s.classList.add('enlarged');
+          else s.classList.remove('enlarged');
+        });
+      });
+
+      btn.addEventListener('mouseout', ()=>{
+        const stars = container.querySelectorAll('.star');
+        stars.forEach(s=> s.classList.remove('enlarged'));
+      });
 
       container.appendChild(btn);
     }
+
+    const clearBtn = document.createElement('button');
+    clearBtn.type = 'button';
+    clearBtn.className = 'clear-btn';
+    clearBtn.innerText = 'Clear';
+    clearBtn.setAttribute('aria-label', 'Clear rating');
+    clearBtn.addEventListener('click', ()=>{
+      setRating(recipeId, 0);
+      updateStars(container, 0);
+    });
+    container.appendChild(clearBtn);
   }
 
   function updateStars(container, rating){
-    const stars = container.querySelectorAll('.bow');
+    const stars = container.querySelectorAll('.star');
     stars.forEach(s=>{
       const v = Number(s.dataset.value);
       s.classList.toggle('rated', v <= rating);
-    });
-  }
-
-  function highlight(container, upto){
-    const stars = container.querySelectorAll('.bow');
-    stars.forEach(s=>{
-      const v = Number(s.dataset.value);
-      s.classList.toggle('rated', v <= upto || (upto===0 && s.classList.contains('rated')) );
     });
   }
 
