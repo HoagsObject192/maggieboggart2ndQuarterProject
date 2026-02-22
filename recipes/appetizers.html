@@ -641,7 +641,23 @@ function performSearch() {
     return;
   }
   
-  const filteredRecipes = recipes.filter(recipe => 
+  // Load fresh user recipes from localStorage
+  const userRecipesStored = [];
+  try {
+    const stored = localStorage.getItem('userRecipes');
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed)) {
+        parsed.forEach(r => { r.isUser = true; if (!r.id) r.id = 'user-' + Date.now() + '-' + Math.floor(Math.random()*100000); });
+        userRecipesStored.push(...parsed);
+      }
+    }
+  } catch (e) { console.error('loadUserRecipes error', e); }
+  
+  // Combine built-in recipes with user recipes
+  const allRecipes = [...recipes, ...userRecipesStored];
+  
+  const filteredRecipes = allRecipes.filter(recipe => 
     recipe.name.toLowerCase().includes(searchInput) || 
     recipe.desc.toLowerCase().includes(searchInput)
   );
@@ -653,28 +669,35 @@ function performSearch() {
   
   const resultsHTML = `
     <div class="search-results-horizontal">
-      ${filteredRecipes.map(recipe => `
-        <div class="recipe-card" onclick="navigateToRecipe('${recipe.link}')">
+      ${filteredRecipes.map(recipe => {
+        const recipeLink = recipe.isUser ? recipe.id : recipe.link;
+        return `
+        <div class="recipe-card" onclick="navigateToRecipe('${recipeLink}', ${recipe.isUser || false})">
           <img src="${recipe.image}" alt="${recipe.name}">
           <h3>${recipe.name}</h3>
           <p>${recipe.desc}</p>
           <button class="recipe-card-btn">View</button>
         </div>
-      `).join('')}
+      `;
+      }).join('')}
     </div>
   `;
   
   resultsContainer.innerHTML = resultsHTML;
 }
 
-function navigateToRecipe(link) {
+function navigateToRecipe(link, isUser) {
   const loadingOverlay = document.getElementById('loading');
   if (loadingOverlay) {
     loadingOverlay.classList.add('active');
   }
   
   setTimeout(function() {
-    window.location.href = link;
+    if (isUser) {
+      window.location.href = 'recipe-view.html?id=' + link;
+    } else {
+      window.location.href = link;
+    }
   }, 2000);
 }
 

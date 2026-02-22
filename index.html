@@ -265,16 +265,12 @@ overflow-x: hidden;
 
 .search-section {
   background: white;
-  padding: 12px 20px;
+  padding: 40px 20px 15px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 20px;
   min-height: auto;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .search-container {
@@ -286,8 +282,8 @@ overflow-x: hidden;
 
 .search-input {
   flex: 1;
-  padding: 8px 12px;
-  font-size: 14px;
+  padding: 12px 16px;
+  font-size: 16px;
   border: 2px solid black;
   border-radius: 5px;
   font-family: "Varela Round", sans-serif;
@@ -298,6 +294,7 @@ overflow-x: hidden;
   outline: none;
   border-color: #f1d2e1;
   box-shadow: 0 0 8px rgba(241, 210, 225, 0.5);
+}
 }
 
 .search-results {
@@ -438,7 +435,7 @@ overflow-x: hidden;
   color: #999;
 }
 
-/* ===== MOBILE RESPONSIVE ===== */
+
 @media (max-width: 768px) {
   .hero-text {
     font-size: 10vw;
@@ -552,6 +549,67 @@ overflow-x: hidden;
   }
 }
 
+.add-recipe-section {
+  background: white;
+  padding: 20px 20px 40px 20px;
+}
+.add-recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px auto 0 auto;
+  max-width: 700px;
+  width: 100%;
+}
+.add-recipe-form .search-input {
+  padding: 10px 12px;
+  width: 100%;
+}
+.add-recipe-form textarea.search-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* make recommendation box full-bleed */
+.recipe-box.fullwidth {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 80px);
+  border-radius: 10px;
+}
+
+/* recipe detail modal */
+.recipe-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.recipe-modal .content {
+  background: white;
+  padding: 20px;
+  max-width: 900px;
+  width: 95%;
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 8px;
+}
+.recipe-modal .close-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  float: right;
+}
+
 </style>
 
 </style>
@@ -586,7 +644,7 @@ overflow-x: hidden;
 </section>.
 
 <section class="search-section">
-  <h2 style="font-size: 2.5vw; color: black; margin-bottom: 10px;">Search Recipes</h2>
+  <h2 style="font-size: 2vw; color: black; margin: 0 0 10px 0;">Search Recipes</h2>
   <div class="search-container">
     <input type="text" class="search-input" id="searchInput" placeholder="Search by recipe name...">
   </div>
@@ -595,7 +653,7 @@ overflow-x: hidden;
 
 <section class="next-section">
   <h2 class="recommendation-title">Chef Moggart's Recommendation</h2>
-  <div class="recipe-box" id="recipeBox">
+  <div class="recipe-box fullwidth" id="recipeBox">
     <img id="recipeImage" src="" alt="Recipe Image" class="recipe-box-image">
     <div class="recipe-box-content">
       <h3 id="recipeName">Loading...</h3>
@@ -603,6 +661,30 @@ overflow-x: hidden;
       <button class="recipe-btn" id="goToRecipeBtn" onclick="goToRecipe()">Go to Recipe</button>
     </div>
   </div>
+
+  <!-- add recipe form moved here so it's shown after recommendation -->
+  <div style="width:100%; background:transparent; display:flex; justify-content:center; margin-top:20px;">
+    <div style="max-width:1200px; width:100%; padding:20px;">
+      <section class="add-recipe-section">
+        <h2 style="font-size: 2.5vw; color: black; margin-bottom: 10px;">Add Your Own Recipe</h2>
+        <form id="addRecipeForm" class="add-recipe-form">
+          <input id="newRecipeName" class="search-input" placeholder="Recipe name" required>
+          <input id="newRecipeImage" class="search-input" placeholder="Image URL (optional)">
+          <input id="newRecipeLink" class="search-input" placeholder="Recipe page link (optional)">
+          <textarea id="newRecipeDesc" class="search-input" placeholder="Short description"></textarea>
+          <textarea id="newRecipeIngredients" class="search-input" placeholder="Ingredients (one per line)"></textarea>
+          <textarea id="newRecipeProcedure" class="search-input" placeholder="Procedure / steps"></textarea>
+          <button type="submit" class="recipe-btn">Add Recipe</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- recipe detail modal -->
+  <div id="recipeModal" class="recipe-modal">
+    <div class="content"></div>
+  </div>
+
 </section>
 
 <script>
@@ -660,9 +742,28 @@ function performSearch() {
     return;
   }
   
-  const filteredRecipes = recipes.filter(recipe => 
+  // Load fresh user recipes from localStorage to ensure most recent
+  const userRecipesStored = [];
+  try {
+    const stored = localStorage.getItem('userRecipes');
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed)) {
+        parsed.forEach(r => { r.isUser = true; if (!r.id) r.id = 'user-' + Date.now() + '-' + Math.floor(Math.random()*100000); });
+        userRecipesStored.push(...parsed);
+      }
+    }
+  } catch (e) { console.error('loadUserRecipes error', e); }
+  
+  // Combine built-in recipes with user recipes
+  const builtInRecipes = recipes.filter(r => !r.isUser);
+  const allRecipes = [...builtInRecipes, ...userRecipesStored];
+  
+  const filteredRecipes = allRecipes.filter(recipe => 
     recipe.name.toLowerCase().includes(searchInput) || 
-    recipe.desc.toLowerCase().includes(searchInput)
+    recipe.desc.toLowerCase().includes(searchInput) ||
+    (recipe.ingredients && recipe.ingredients.join(' ').toLowerCase().includes(searchInput)) ||
+    (recipe.procedure && recipe.procedure.toLowerCase().includes(searchInput))
   );
   
   if (filteredRecipes.length === 0) {
@@ -672,13 +773,22 @@ function performSearch() {
   
   const resultsHTML = `
     <div class="search-results-horizontal">
-      ${filteredRecipes.map(recipe => `
-        <div class="recipe-card" onclick="navigateToRecipe('${recipe.link}')">
-          <img src="${recipe.image}" alt="${recipe.name}">
-          <h3>${recipe.name}</h3>
-          <button class="recipe-card-btn">View</button>
-        </div>
-      `).join('')}
+      ${filteredRecipes.map(recipe => {
+        if (recipe.isUser) {
+          return `<div class="recipe-card" onclick="window.location.href='recipes/recipe-view.html?id=${encodeURIComponent(recipe.id)}'">
+            <img src="${recipe.image}" alt="${recipe.name}">
+            <h3>${recipe.name}</h3>
+            <button class="recipe-card-btn">View</button>
+          </div>`;
+        } else {
+          const idx = recipes.indexOf(recipe);
+          return `<div class="recipe-card" onclick="openRecipe(${idx})">
+            <img src="${recipe.image}" alt="${recipe.name}">
+            <h3>${recipe.name}</h3>
+            <button class="recipe-card-btn">View</button>
+          </div>`;
+        }
+      }).join('')}
     </div>
   `;
   
@@ -694,19 +804,99 @@ function navigateToRecipe(link) {
   }, 2000);
 }
 
-// Real-time search on input
+
+const USER_RECIPES_KEY = 'userRecipes';
+(function loadUserRecipes(){
+  try {
+    const stored = localStorage.getItem(USER_RECIPES_KEY);
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed)) {
+        parsed.forEach(r => { r.isUser = true; if (!r.id) r.id = 'user-' + Date.now() + '-' + Math.floor(Math.random()*100000); });
+        recipes.push(...parsed);
+      }
+    }
+  } catch (e) { console.error('loadUserRecipes', e); }
+})();
+
+function saveUserRecipes(){
+  try {
+    const userAdded = recipes.filter(r => r.isUser);
+    localStorage.setItem(USER_RECIPES_KEY, JSON.stringify(userAdded));
+  } catch (e) { console.error('saveUserRecipes', e); }
+}
+
+function addRecipeFromForm(e){
+  e.preventDefault();
+  const name = document.getElementById('newRecipeName').value.trim();
+  const image = document.getElementById('newRecipeImage').value.trim();
+  const desc = document.getElementById('newRecipeDesc').value.trim();
+  const link = document.getElementById('newRecipeLink').value.trim() || '#';
+  const ingredientsRaw = document.getElementById('newRecipeIngredients').value.trim();
+  const procedure = document.getElementById('newRecipeProcedure').value.trim();
+  if (!name) { alert('Please enter a recipe name.'); return; }
+  const ingredients = ingredientsRaw ? ingredientsRaw.split(/\r?\n/).map(s => s.trim()).filter(Boolean) : [];
+  const recipe = { id: 'user-' + Date.now() + '-' + Math.floor(Math.random()*100000), name, image: image || 'recipes/media/burger.png', desc, link, ingredients, procedure, isUser: true };
+  recipes.push(recipe);
+  saveUserRecipes();
+  generateRandomRecipe();
+  document.getElementById('addRecipeForm').reset();
+  alert("Recipe added! It's now searchable and viewable on this site.");
+}
+
+function openRecipe(index) {
+  const recipe = recipes[index];
+  if (!recipe) return;
+  if (recipe.isUser) {
+    // it opens a page for the recipes the user makes
+    window.location.href = `recipes/recipe-view.html?id=${encodeURIComponent(recipe.id)}`;
+    return;
+  }
+  if (recipe.link && recipe.link !== '#') {
+    navigateToRecipe(recipe.link);
+    return;
+  }
+  const modal = document.getElementById('recipeModal');
+  if (!modal) return;
+  const content = modal.querySelector('.content');
+  content.innerHTML = `
+    <button class="close-btn" onclick="closeRecipeModal()">Close</button>
+    <h2>${recipe.name}</h2>
+    <img src="${recipe.image || 'recipes/media/burger.png'}" style="width:150px;height:150px;object-fit:cover;margin:10px 0;">
+    <p><strong>Description:</strong> ${recipe.desc || ''}</p>
+    <p><strong>Ingredients:</strong></p>
+    <ul>${(recipe.ingredients||[]).map(i=>`<li>${i}</li>`).join('')}</ul>
+    <p><strong>Procedure:</strong></p>
+    <div>${(recipe.procedure||'').replace(/\n/g,'<br>')}</div>
+  `;
+  modal.style.display = 'flex';
+}
+
+function closeRecipeModal(){
+  const modal = document.getElementById('recipeModal');
+  if (modal) modal.style.display = 'none';
+}
+
+
+//  u can find it in the search search on input
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('searchInput');
   if (searchInput) {
-    // Perform search on every keystroke
+    // this is acc tuff like it kinda updates search even if u js add a letter like netflix
     searchInput.addEventListener('input', performSearch);
-    // Also support Enter key
+    //  support Enter key
     searchInput.addEventListener('keypress', function(e) {
       if (e.key === 'Enter') {
         performSearch();
       }
     });
   }
+});
+
+// 
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('addRecipeForm');
+  if (form) form.addEventListener('submit', addRecipeFromForm);
 });
 
 function toggleMenu() {
