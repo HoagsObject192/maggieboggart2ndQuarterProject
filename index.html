@@ -627,6 +627,7 @@ overflow-x: hidden;
     <li><a href="indecisive.html">Indecisive</a></li>
     <li><a href="playlists.html">Playlists</a></li>
     <li><a href="recipes/aboutus.html">About Us</a></li>
+    <li><a href="recipes/citations.html">Citations</a></li>
   </ul>
 </div>
 
@@ -824,7 +825,7 @@ function saveUserRecipes(){
     localStorage.setItem(USER_RECIPES_KEY, JSON.stringify(userAdded));
   } catch (e) { console.error('saveUserRecipes', e); }
 }
-
+//omddd i hated using boolean and the math thing here but its liters=ally the notif
 function addRecipeFromForm(e){
   e.preventDefault();
   const name = document.getElementById('newRecipeName').value.trim();
@@ -876,7 +877,7 @@ function closeRecipeModal(){
 }
 
 
-//  u can find it in the search search on input
+//  u can find it in the search on input
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('searchInput');
   if (searchInput) {
