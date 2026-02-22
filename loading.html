@@ -18,7 +18,7 @@
 
     .loading-container {
       height: 100vh;
-      background-color: #f1d2e1; /* Pink */
+      background-color: #f1d2e1;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -38,11 +38,26 @@
         transform: rotate(360deg);
       }
     }
+
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .rotating-cat {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .rotating-cat {
+        width: 100px;
+        height: 100px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="loading-container">
-    <img src="media/moggart.png" class="rotating-cat" alt="Loading...">
+    <img src="recipes/media/moggart.png" class="rotating-cat" alt="Loading...">
   </div>
 </body>
 </html>
