@@ -17,13 +17,30 @@
 <body>
   <h1>Citations (Website inspiration)</h1>
   <p class="note">The following websites were used as visual or interaction inspiration. Formatted in APA style.</p>
-
-  <div class="cite">Crumbl Cookies. (n.d.). Crumbl Cookies. Retrieved February 22, 2026, from https://crumblcookies.com/</div>
-
-  <div class="cite">Tabnav. (n.d.). Best website design examples. Retrieved February 22, 2026, from https://tabnav.com/blog/best-website-design-examples</div>
-
-  <div class="cite">Tasty. (n.d.). Tasty. Retrieved February 22, 2026, from https://tasty.co/</div>
+  <div id="citationsContainer"></div>
 
   <a class="back" href="../index.html">Back to Home</a>
+
+  <script>
+    (function(){
+      const citations = [
+        {org: 'Tasty', title: 'Tasty', url: 'https://tasty.co/'},
+        {org: 'Crumbl Cookies', title: 'Crumbl Cookies', url: 'https://crumblcookies.com/'},
+        {org: 'Web Design Inspiration', title: 'Web Design Inspiration', url: 'https://www.webdesign-inspiration.com/'}
+      ];
+
+      const now = new Date();
+      const opts = { year: 'numeric', month: 'long', day: 'numeric' };
+      const dateStr = now.toLocaleDateString('en-US', opts);
+
+      const container = document.getElementById('citationsContainer');
+      citations.forEach(c => {
+        const d = document.createElement('div');
+        d.className = 'cite';
+        d.textContent = `${c.org}. (n.d.). ${c.title}. Retrieved ${dateStr}, from ${c.url}`;
+        container.appendChild(d);
+      });
+    })();
+  </script>
 </body>
 </html>
