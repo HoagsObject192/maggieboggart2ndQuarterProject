@@ -29,7 +29,7 @@
      
         .rating-box{
         margin-top:12px;
-        background-color:#e6b3be;
+        background-color:#000000;
         border:2px solid black;
         padding:16px;
         box-sizing:border-box;
