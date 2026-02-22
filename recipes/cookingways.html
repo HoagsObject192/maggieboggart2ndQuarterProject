@@ -6,7 +6,7 @@
     <title>Syntax to Spices | Homepage</title>
 
     <style>
-        .whisk-btn {
+ .whisk-btn {
   position: fixed;
   top: 30px;
   left: 30px;
@@ -46,12 +46,13 @@
 }
 
 .side-menu a:hover {
-  color: #f1d2e1;
+  color: #f1d2e1 !important;
+  background-color: transparent !important;
+  font-size: inherit !important;
 }
 
 .side-menu a:visited {
   color: black;
-  text-decoration: none;
 }
 
 .side-menu li {
@@ -244,6 +245,11 @@
             font-family: "Varela Round", sans-serif; 
 
         }
+        *{
+            box-sizing: border-box;
+            font-family: "Varela Round", sans-serif; 
+
+        }
 
         .h1 {
             text-align: center;
@@ -259,7 +265,7 @@
             padding-top: 0;
         }
 
-
+    
 
 
         .container {
@@ -337,16 +343,20 @@
             gap: 10px;
         }
 
-        /* duplicate body block removed to avoid conflicting rules */
+        .box {
+            border: 5px solid #e6b3be;
+            padding: 16px 18px;
+            border-radius: 6px;
+
+        }
 
         .recipes {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            padding: 0 20px;
-            margin-bottom: 20px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          max-width: 1200px;  
+          margin: 0 auto;    
+          padding: 40px 20px;
         }
 
         .recipe {
@@ -354,8 +364,7 @@
             margin: 0;
             width: 100%;
             max-width: 400px;
-            height: 350px;
-            gap: 30px;
+            gap: 10px;
             background-color: #e6b3be;
             color: aliceblue;
             box-sizing: border-box;
@@ -397,13 +406,11 @@
         }
 
         
-        .recipe img,
-        .recipes img {
-            display: block;
-            margin: 0 auto;
-            width: 350px !important;
-            height: 200px !important;
-            object-fit: cover;
+        .recipe img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 6px;
         }
 
         /* ===== MOBILE RESPONSIVE ===== */
@@ -510,7 +517,6 @@
         <li><a href="../indecisive.html">Indecisive</a></li>
         <li><a href="../playlists.html">Playlists</a></li>
         <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="citations.html">Citations</a></li>
       </ul>
     </div>
 
@@ -529,26 +535,72 @@
     </section>
 
     <main class="main">
-            <h1 style="text-align: center;">COOKING BASICS</h1>
+            <h1 style="text-align: center;">CHOPPING BOARD BASICS</h1>
         <br>
 
         <div class="recipes">
             <div class="box recipe">
-                <a class="recipe-link" href="cb.html" aria-label="Chopping Board Basics">
-                    <img src="media/cb.png" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
-                    <h2 style="text-align: center;">Chopping Board Basics</h2>
-                    <h4>A guide to different ways of cutting food, including some cool vocabulary.</h4>
-                </a>
-            </div>
-            <div class="box recipe">
-                <a class="recipe-link" href="cookingways.html" aria-label="Different Ways of Cooking">
-                    <img src="media/Gas_vs_electric_stove_Image1M.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
-                    <h2 style="text-align: center;">Different Ways of Cooking</h2>
-                    <h4>A guide to different ways of cooking food, including some cool vocabulary.</h4>
-                </a>
+                    <img src="media/GettyImages-1794295535-f637e83a49d942a7af509b3a76e044aa.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Boiling</h2>
+                    <h4>Boiling means to cook food in a large amount of rapidly boiling water. This softens vegetables and tenderizes meat.</h4>
+                
             </div>
 
-                  
+            <div class="box recipe">
+                    <img src="media/panko-fried-shrimp-for-two-912720-step-12-5be21df0c9e77c0051b33aab.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Frying</h2>
+                    <h4>Frying means to cook food in hot oil or fat. This method creates a crispy exterior while keeping the inside tender and juicy.</h4>
+
+            </div>
+
+            <div class="box recipe">
+                    <img src="media/grilled-kabobs.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Grilling</h2>
+                    <h4>Grilling means to cook food over direct heat on a grill. This method imparts a smoky flavor and creates a charred exterior while maintaining the interior's tenderness.</h4>
+
+            </div>
+
+            <div class="box recipe">
+                    <img src="media/Roasting_meat_at_Hampton_Court_Palace.JPG" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Roasting</h2>
+                    <h4>Roasting means to cook food in an oven or over indirect heat. This method creates a golden-brown exterior while keeping the interior moist and flavorful.</h4>
+
+            </div>    
+
+            <div class="box recipe">
+                    <img src="media/steam.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Steaming</h2>
+                    <h4>Steaming means to cook food in steam. This method preserves nutrients and keeps vegetables crisp and tender.</h4>
+
+            </div>    
+
+            <div class="box recipe">
+                    <img src="media/Why-Bake-at-350-Degrees-3x2-1-bd2294f1e91242968739da686dd2472f.png" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Baking</h2>
+                    <h4>Baking means to cook food in an oven. This method is ideal for breads and pastries, creating a golden crust and evenly cooked interior.</h4>
+
+            </div>  
+
+            <div class="box recipe">
+                    <img src="media/simmering-stock-r.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Simmering</h2>
+                    <h4>Simmering means to cook food in gently bubbling water or liquid. This method is ideal for soups and stews, allowing flavors to meld together slowly and creating rich, complex dishes.</h4>
+
+            </div> 
+
+            <div class="box recipe">
+                    <img src="media/poaching-3-1200.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Poaching</h2>
+                    <h4>Poaching means to cook food in gently simmering liquid. This method is ideal for delicate foods like fish and eggs, preserving their texture and flavor.</h4>
+
+            </div>    
+
+            <div class="box recipe">
+                    <img src="media/AdobeStock_212241432.jpeg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Smoking</h2>
+                    <h4>Smoking means to cook food in a smoke-filled environment. This method imparts a distinctive smoky flavor and can also help preserve and tenderize meats.</h4>
+
+            </div>        
         </div>
 
             
@@ -574,17 +626,18 @@
     <footer>
         © Jairo Stian Reolizo | Audrey Margaret Tan
     </footer>
+<script src="../ratings.js"></script>
 <script>
 const recipes = [
-  { name: "Burger", image: "media/burger.png", desc: "Classic beef burger", link: "burger.html" },
-  { name: "Tacos", image: "media/tacos.png", desc: "Delicious tacos", link: "tacos.html" },
-  { name: "Caesar Salad", image: "media/caesar.png", desc: "Fresh Caesar salad", link: "caesar.html" },
-  { name: "Chili Garlic", image: "media/chiligarlic.png", desc: "Spicy chili garlic dish", link: "chiligarlic.html" },
-  { name: "Chocolate Cookies", image: "media/choccookies.png", desc: "Delicious chocolate cookies", link: "choccookies.html" },
-  { name: "Cinnamon Roll", image: "media/cinnaroll.png", desc: "Sweet cinnamon rolls", link: "cinnaroll.html" },
-  { name: "Mac n Cheese", image: "media/Mac n Cheese.png", desc: "Creamy mac and cheese", link: "Mac n Cheese.html" },
-  { name: "French Fries", image: "media/French Fries.png", desc: "Crispy french fries", link: "French Fries.html" },
-  { name: "Jeremiah Cake", image: "media/jeremiah-cake.png", desc: "Special Jeremiah cake", link: "jeremiah-cake.html" }
+  { name: "Burger", image: "media/burger.png", desc: "A juicy beef patty is paired with melted cheese, fresh lettuce, and ripe tomatoes inside a soft bun. Each bite balances tender meat, crisp veggies, and pillowy bread. The ultimate comfort food classic.", link: "burger.html" },
+  { name: "Tacos", image: "media/tacos.png", desc: "Tender, seasoned chicken is tucked into warm tortillas with fresh toppings like salsa and cilantro. Smoky, savory spices mingle with bright, zesty notes. A flavorful and fun handheld meal.", link: "tacos.html" },
+  { name: "Chocolate Chip Cookies", image: "media/choccookies.png", desc: "Golden-brown cookies with a chewy center are studded with rich chocolate chips. Sweet, buttery, and irresistibly soft. A nostalgic treat that melts in your mouth.", link: "choccookies.html" },
+  { name: "Caesar Salad", image: "media/Caesar.jpg", desc: "Crisp romaine lettuce is tossed in a creamy, garlicky dressing with Parmesan and crunchy croutons. Each bite is fresh and savory, with a satisfying crunch. A classic salad that feels both light and indulgent.", link: "caesar.html" },
+  { name: "French Fries", image: "media/French_Fries.jpg", desc: "French fries, a fast food staple and an appetizer kids love. It is a dish of salty and evenly cut strips of potatoes. It can be made in many ways, as thickness and cooking methods can vary.", link: "French%20Fries.html" },
+  { name: "Cinnamon Roll", image: "media/cinnamon.png", desc: "Cinnamon rolls originated in Northern Europe, particularly Sweden, where kanelbullar became a traditional sweet bread enjoyed with coffee. They have a warm, comforting flavor profile dominated by aromatic cinnamon, rich butter, and soft yeasty dough.", link: "cinnaroll.html" },
+  { name: "Chili Garlic Pasta", image: "media/chili.png", desc: "Slippery noodles are coated in a spicy, aromatic chili-garlic sauce. Chewy noodles meet bold, savory flavors in every bite. A comforting dish with a satisfying kick.", link: "chiligarlic.html" },
+  { name: "Mac n Cheese", image: "media/Mac.jpg", desc: "Mac and cheese is a comfort food dish made with macaroni pasta and a cheese sauce. It is a known side dish in American cuisine, often served as an appetizer or main course. Mac and cheese is creamy and cheesy.", link: "Mac%20n%20Cheese.html" },
+  { name: "Jeremiah Cake", image: "media/Jeremiah.jpg", desc: "This cake shows how big of a red flag Jeremiah is. It is a towering multi-layered cake adorned with rich and glossy decorations, symbolizing his extravagant and over-the-top personality.", link: "jeremiah-cake.html" }
 ];
 
 function performSearch() {
@@ -596,23 +649,7 @@ function performSearch() {
     return;
   }
   
-  // Load fresh user recipes from localStorage
-  const userRecipesStored = [];
-  try {
-    const stored = localStorage.getItem('userRecipes');
-    if (stored) {
-      const parsed = JSON.parse(stored);
-      if (Array.isArray(parsed)) {
-        parsed.forEach(r => { r.isUser = true; if (!r.id) r.id = 'user-' + Date.now() + '-' + Math.floor(Math.random()*100000); });
-        userRecipesStored.push(...parsed);
-      }
-    }
-  } catch (e) { console.error('loadUserRecipes error', e); }
-  
-  // Combine built-in recipes with user recipes
-  const allRecipes = [...recipes, ...userRecipesStored];
-  
-  const filteredRecipes = allRecipes.filter(recipe => 
+  const filteredRecipes = recipes.filter(recipe => 
     recipe.name.toLowerCase().includes(searchInput) || 
     recipe.desc.toLowerCase().includes(searchInput)
   );
@@ -624,14 +661,13 @@ function performSearch() {
   
   let html = '<div class="search-results-horizontal">';
   filteredRecipes.forEach(recipe => {
-    const recipeLink = recipe.isUser ? recipe.id : recipe.link;
     html += `
       <div class="recipe-card">
         <img src="${recipe.image}" alt="${recipe.name}">
         <div class="recipe-card-content">
           <h3>${recipe.name}</h3>
           <p>${recipe.desc}</p>
-          <button class="recipe-card-btn" onclick="navigateToRecipe('${recipeLink}', ${recipe.isUser || false})">View Recipe</button>
+          <button class="recipe-card-btn" onclick="navigateToRecipe('${recipe.link}')">View Recipe</button>
         </div>
       </div>
     `;
@@ -640,16 +676,12 @@ function performSearch() {
   resultsContainer.innerHTML = html;
 }
 
-function navigateToRecipe(link, isUser) {
+function navigateToRecipe(link) {
   const loadingOverlay = document.getElementById('loading');
   loadingOverlay.classList.add('active');
   
   setTimeout(function() {
-    if (isUser) {
-      window.location.href = 'recipe-view.html?id=' + link;
-    } else {
-      window.location.href = link;
-    }
+    window.location.href = link;
   }, 2000);
 }
 
