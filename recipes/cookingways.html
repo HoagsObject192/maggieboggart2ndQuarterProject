@@ -351,12 +351,13 @@
         }
 
         .recipes {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            align-items: stretch;
-            margin-bottom: 60px;
-          }
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          max-width: 1200px;  
+          margin: 0 auto;    
+          padding: 40px 20px;
+        }
 
         .recipe {
             padding: 10px;
@@ -539,25 +540,67 @@
 
         <div class="recipes">
             <div class="box recipe">
-                    <img src="media/chop.png" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
-                    <h2 style="text-align: center;">Chopping</h2>
-                    <h4>Chopping means to casually and roughly cut food into bite sized pieces.</h4>
+                    <img src="media/GettyImages-1794295535-f637e83a49d942a7af509b3a76e044aa.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Boiling</h2>
+                    <h4>Boiling means to cook food in a large amount of rapidly boiling water. This softens vegetables and tenderizes meat.</h4>
                 
             </div>
 
             <div class="box recipe">
-                    <img src="media/dice.png" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
-                    <h2 style="text-align: center;">Dicing</h2>
-                    <h4>Dicing means to PRECISELY and EVENLY cut the food into small, fine cubes creating a uniformed look. </h4>
+                    <img src="media/panko-fried-shrimp-for-two-912720-step-12-5be21df0c9e77c0051b33aab.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Frying</h2>
+                    <h4>Frying means to cook food in hot oil or fat. This method creates a crispy exterior while keeping the inside tender and juicy.</h4>
 
             </div>
 
             <div class="box recipe">
-                    <img src="media/julienne.png" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
-                    <h2 style="text-align: center;">Julienne</h2>
-                    <h4>The Julienne cut means cutting the ingredient into LONG, uniform, matchstick-like strips. It is often used for salad ingredients.</h4>
+                    <img src="media/grilled-kabobs.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Grilling</h2>
+                    <h4>Grilling means to cook food over direct heat on a grill. This method imparts a smoky flavor and creates a charred exterior while maintaining the interior's tenderness.</h4>
 
-            </div>            
+            </div>
+
+            <div class="box recipe">
+                    <img src="media/Roasting_meat_at_Hampton_Court_Palace.JPG" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Roasting</h2>
+                    <h4>Roasting means to cook food in an oven or over indirect heat. This method creates a golden-brown exterior while keeping the interior moist and flavorful.</h4>
+
+            </div>    
+
+            <div class="box recipe">
+                    <img src="media/steam.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Steaming</h2>
+                    <h4>Steaming means to cook food in steam. This method preserves nutrients and keeps vegetables crisp and tender.</h4>
+
+            </div>    
+
+            <div class="box recipe">
+                    <img src="media/Why-Bake-at-350-Degrees-3x2-1-bd2294f1e91242968739da686dd2472f.png" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Baking</h2>
+                    <h4>Baking means to cook food in an oven. This method is ideal for breads and pastries, creating a golden crust and evenly cooked interior.</h4>
+
+            </div>  
+
+            <div class="box recipe">
+                    <img src="media/simmering-stock-r.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Simmering</h2>
+                    <h4>Simmering means to cook food in gently bubbling water or liquid. This method is ideal for soups and stews, allowing flavors to meld together slowly and creating rich, complex dishes.</h4>
+
+            </div> 
+
+            <div class="box recipe">
+                    <img src="media/poaching-3-1200.jpg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Poaching</h2>
+                    <h4>Poaching means to cook food in gently simmering liquid. This method is ideal for delicate foods like fish and eggs, preserving their texture and flavor.</h4>
+
+            </div>    
+
+            <div class="box recipe">
+                    <img src="media/AdobeStock_212241432.jpeg" width="350px" height="200" style="border: 5px solid; max-width: 380px; border-radius: 6px; object-fit: cover; object-position: center;">
+                    <h2 style="text-align: center;">Smoking</h2>
+                    <h4>Smoking means to cook food in a smoke-filled environment. This method imparts a distinctive smoky flavor and can also help preserve and tenderize meats.</h4>
+
+            </div>        
         </div>
 
             
