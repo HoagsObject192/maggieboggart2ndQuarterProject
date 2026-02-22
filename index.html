@@ -670,7 +670,6 @@ overflow-x: hidden;
         <form id="addRecipeForm" class="add-recipe-form">
           <input id="newRecipeName" class="search-input" placeholder="Recipe name" required>
           <input id="newRecipeImage" class="search-input" placeholder="Image URL (optional)">
-          <input id="newRecipeLink" class="search-input" placeholder="Recipe page link (optional)">
           <textarea id="newRecipeDesc" class="search-input" placeholder="Short description"></textarea>
           <textarea id="newRecipeIngredients" class="search-input" placeholder="Ingredients (one per line)"></textarea>
           <textarea id="newRecipeProcedure" class="search-input" placeholder="Procedure / steps"></textarea>
@@ -831,12 +830,11 @@ function addRecipeFromForm(e){
   const name = document.getElementById('newRecipeName').value.trim();
   const image = document.getElementById('newRecipeImage').value.trim();
   const desc = document.getElementById('newRecipeDesc').value.trim();
-  const link = document.getElementById('newRecipeLink').value.trim() || '#';
   const ingredientsRaw = document.getElementById('newRecipeIngredients').value.trim();
   const procedure = document.getElementById('newRecipeProcedure').value.trim();
   if (!name) { alert('Please enter a recipe name.'); return; }
   const ingredients = ingredientsRaw ? ingredientsRaw.split(/\r?\n/).map(s => s.trim()).filter(Boolean) : [];
-  const recipe = { id: 'user-' + Date.now() + '-' + Math.floor(Math.random()*100000), name, image: image || 'recipes/media/burger.png', desc, link, ingredients, procedure, isUser: true };
+  const recipe = { id: 'user-' + Date.now() + '-' + Math.floor(Math.random()*100000), name, image: image || 'recipes/media/burger.png', desc, ingredients, procedure, isUser: true };
   recipes.push(recipe);
   saveUserRecipes();
   generateRandomRecipe();
