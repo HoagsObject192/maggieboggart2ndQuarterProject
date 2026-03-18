@@ -74,6 +74,7 @@ Meet our mascot Moggart!!!!
 ### Home Page 
 ![Courses page](https://github.com/user-attachments/assets/0453e5c3-4ea0-4cd1-847c-23e3b4437c35)
 
+<img width="1217" height="678" alt="image" src="https://github.com/user-attachments/assets/49535713-c921-4e2a-9db4-afc35df3c934" />
 
 ### Courses Page
 ![Courses page (2)](https://github.com/user-attachments/assets/bc917056-ec6a-49a0-86dc-e21c61268e19)
@@ -95,6 +96,13 @@ Meet our mascot Moggart!!!!
 
 ## **VII. DEFINITION OF DONE**
 Being done for us in our case, for one, is that it is fully functional. It is able to serve its purpose as an at-home menu for cravings you wouldn’t have known about if you haven’t looked at the website. For the website to also be done, it also must be clean, organized, and appealing to the eye even on mobile as it is part of the requirements. It also must  be easy to navigate with just the right amount of buttons. It also must be website also must contain all of the needed content and information. All images should be there and all links/buttons lead to the right pages, and everything functions properly. All of the special features from the posts should also be incorporated. We want it to feel like LetterBoxd an Facebook as one site, but instead of movies and random people from the internet, you’re looking at food recipes from random people. We really want it to stand out. Thoughaside from the content and visuals, stuff like the code and file names must also be organized. 
+
+<img width="1124" height="664" alt="image" src="https://github.com/user-attachments/assets/c31a2772-f214-4782-8053-c28a9222cfb6" />
+<img width="1021" height="576" alt="image" src="https://github.com/user-attachments/assets/ff7a56c8-315a-403c-a346-00569c1a3e33" />
+<img width="1021" height="576" alt="image" src="https://github.com/user-attachments/assets/7b7d9a34-a3cf-4382-954a-6c4be2412c2f" />
+
+
+
 
 
 
