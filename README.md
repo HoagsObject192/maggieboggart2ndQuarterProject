@@ -13,15 +13,15 @@
 ### Students and aspiring chefs wil love this project because it proves that good foof doesn't have to be hard to make. It also saves time by offering quick, easy-to-follow recipes that fit into busy schedules. Additionally, it encourages creativity by allowing users to experiment with their own dishes and build confidence in their cooking skills.
 
 ## **IV. This project includes:**
-### *a search bar for easy access to recipes
-### *and add your own recipe feature
-### *a rating feature for each recipe
-### *a random recipe generator
+### - a search bar for easy access to recipes
+### - and add your own recipe feature
+### - a rating feature for each recipe
+### - a random recipe generator
 
 ## **IV. This project does not (yet) include:**
-### *an account system
-### *a meal prep/planning system
-### *filters for searching recipes
+### - an account system
+### - a meal prep/planning system
+### - filters for searching recipes
 
 ## **V. How did we use local storage? (with wireframes)**
 ### We used local storage in the "add your own recipe" feature where users can make the site more personal by adding their own recipes private from other users. This feature also allows the user to search their own recipes in the search bar. Lastly, users can delete the recipes they upload on the site.
@@ -38,7 +38,7 @@
 <img width="512" height="289" alt="image" src="https://github.com/user-attachments/assets/850c2085-dd73-4707-8f89-06c5db11cc2a" />
 
 
-
+###_______________________________________________________________________________________________________________________________________________________________________
 
 
 
