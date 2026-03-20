@@ -6,30 +6,34 @@
 ## **I.  2-Sentence Description**
 ### Cooked. is inspired by our busy lives juggling pre-lab requirements, class projects, and study sessions, mixed with Jairo’s love for eating, and Maggie’s love for collecting recipes, this site aims to prove that even the busiest and the most tired learners can cook up something simple and satisfying. It features both original and curated recipes all carefully chosen based on practicality, accessibility and most importantly, taste. 
 
-## **II. This Project is for...**
+## ** II. This Project is for... **
 ### The primary targeted audiemce for this website are students who want to cook yet don't have time for complex recipes. Cooked. provides them with a variety of yummy yet still simple recipes without any fancy ingredients. Aside from students, Cooked. is targetted to wards aspiring chefs who are overwhelemed with the culinary world and want to start with something basic. The website could help them organize rate, and even add their own creative recipes, just like a personal recipe book. Ultimately, Cooked. empowers users to build confidence in the kitchen while making cooking both accessible and enjoyable.
 
-## **III. They will love it because...**
+## ** III. They will love it because... **
 ### Students and aspiring chefs wil love this project because it proves that good foof doesn't have to be hard to make. It also saves time by offering quick, easy-to-follow recipes that fit into busy schedules. Additionally, it encourages creativity by allowing users to experiment with their own dishes and build confidence in their cooking skills.
 
-## **IV. This project includes: **
+## ** IV. This project includes: **
 ### * a search bar for easy access to recipes
 ### * and add your own recipe feature
 ### * a rating feature for each recipe
 ### * a random recipe generator
 
-## **IV. This project does not (yet) include: **
+## ** IV. This project does not (yet) include: **
 ### * an account system
 ### * a meal prep/planning system
 ### * filters for searching recipes
 
-## **V. How did we use local storage? (with wireframes) **
+## ** V. How did we use local storage? (with wireframes) **
 ### We used local storage in the "add your own recipe" feature where users can make the site more personal by adding their own recipes private from other users. This feature also allows the user to search their own recipes in the search bar. Lastly, users can delete the recipes they upload on the site.
 
 ### adding your own recipe
 <img width="512" height="285" alt="image" src="https://github.com/user-attachments/assets/6c77ca9d-32fa-48e5-bfb2-b55cebe95870" />
+
+
 ### users can search up the recipes they add
 <img width="512" height="302" alt="image" src="https://github.com/user-attachments/assets/aa4fa104-3cad-4312-8bed-09b0a9a5cea4" />
+
+
 ### users can delete the recipes they upload
 <img width="512" height="289" alt="image" src="https://github.com/user-attachments/assets/850c2085-dd73-4707-8f89-06c5db11cc2a" />
 
