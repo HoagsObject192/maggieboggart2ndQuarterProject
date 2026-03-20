@@ -14,7 +14,7 @@
 
 ## **IV. This project includes:**
 ### - a search bar for easy access to recipes
-### - and add your own recipe feature
+### - an add your own recipe feature
 ### - a rating feature for each recipe
 ### - a random recipe generator
 
@@ -37,8 +37,7 @@
 ### users can delete the recipes they upload
 <img width="512" height="289" alt="image" src="https://github.com/user-attachments/assets/850c2085-dd73-4707-8f89-06c5db11cc2a" />
 
-
-###_______________________________________________________________________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________________________________________________________
 
 
 
